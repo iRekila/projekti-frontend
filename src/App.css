@@ -1,18 +1,70 @@
-.App {
-  width: 200px;
+.App-logo {
+  width: 400px;
+}
+#container {
+
+    display: grid;
+    gap: 15px;
+    grid-template-columns:  150px auto auto auto auto;
+
 }
 
-#header {
-  align-items: center;
-}
 
 #header_text {
   font-family: 'Concert One', cursive;
-  color: #1E261E;
-  font-size: 50px;
+  font-size: 80px;
 }
 
-#cart_button {
+#wheat {
+  height:500px; margin-left:-15px;
+  padding-right: 100px;
+  padding-top: 40px;
+}
+
+.thumbnail {
+  border:none; background:white;
+}
+
+.box  {
+  font-size:10px; color:#03225C;
+}
+
+#footer {
+  background-color: rgba(0, 0, 0, 0.2);
+  font-family: 'Concert One'
+}
+
+#div_text {
+  font-family: 'Concert One';
+  font-size: 20px;
+  padding-right: 100px;
+  padding-top: 40px;
+}
+
+body {
+  background-color: #F5F5DC;
+}
+a {
+  color:#1E261E;
+  text-decoration: none;
+  font-family: 'Concert One';
+}
+a:hover {
+ color:#CEAE2C
+} 
+#readmore_div {
+  padding-top: 50px;
+}
+#readmore {
+  background-color: #CEAE2C;
+  border-color: #CEAE2C;
   color: #1E261E;
-  font-size: 25px;
+  font-size: 40px;
+  
+}
+#readmore:hover {
+
+  background-color: #1E261E;
+  color: #CEAE2C;
+  border-color: #1E261E;
 }
