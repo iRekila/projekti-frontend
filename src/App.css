@@ -10,9 +10,13 @@
 }
 
 
-#header_text {
-  font-family: 'Concert One', cursive;
-  font-size: 80px;
+#texts {
+  text-decoration: none;
+  font-family: 'Concert One' ;
+  font-size: 60px;
+  padding-right: 30px;
+  padding-top: 40px;
+  color: #1E261E;
 }
 
 #wheat {
@@ -35,22 +39,24 @@
 }
 
 #div_text {
-  font-family: 'Concert One';
+  font-family: 'Concert One' ;
   font-size: 20px;
   padding-right: 100px;
   padding-top: 40px;
 }
 
+
 body {
   background-color: #F5F5DC;
 }
-a {
+#text1 {
   color:#1E261E;
   text-decoration: none;
-  font-family: 'Concert One';
+  font-family: 'Josefin Sans',sans-serif;
 }
-a:hover {
- color:#CEAE2C
+#texts:hover {
+ color:#CEAE2C;
+ text-decoration: none;
 } 
 #readmore_div {
   padding-top: 50px;
@@ -68,3 +74,4 @@ a:hover {
   color: #CEAE2C;
   border-color: #1E261E;
 }
+
