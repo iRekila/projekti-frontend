@@ -21,22 +21,11 @@ export default function Readmore() {
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </a>
             <div class="container">
-              <Link to="/"><button type="button" id="readmore" data-toggle="collapse" data-target="#textbox">READ LESS</button></Link>
-                
-              
+              <Link to="/"><button type="button" id="readmore" data-toggle="collapse" data-target="#textbox">READ LESS</button></Link>     
             </div>
           </div>
         </div>
       </div>
-
-
-      <footer class="bg-dark text-white text-center text-lg-start fixed-bottom">
-        <div id="footer" class="text-center p-3" >
-          © 2022 Copyright: sg3
-          <a class="text-dark"></a>
-        </div>
-
-      </footer>
     </html>
   )
 

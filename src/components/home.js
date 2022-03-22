@@ -33,15 +33,6 @@ export default function Front() {
           </div>
         </div>
       </div>
-
-
-      <footer class="bg-dark text-white text-center text-lg-start fixed-bottom">
-        <div id="footer" class="text-center p-3" >
-          © 2022 Copyright: sg3
-          <a class="text-dark"></a>
-        </div>
-
-      </footer>
     </html>
   )
 
