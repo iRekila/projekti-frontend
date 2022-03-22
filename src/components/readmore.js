@@ -15,13 +15,13 @@ export default function Readmore() {
               erat volutpat. Ut wisi enim ad
               minim veniam, quis nostrud exerci
               tation ullamcorp                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </a>
             <div class="container">
-              <Link to="/"><button type="button" id="readmore" data-toggle="collapse" data-target="#textbox">READ LESS</button></Link>     
+              <Link to="/"><button type="button" id="readmore" data-toggle="collapse" data-target="#textbox">READ LESS</button></Link>
             </div>
           </div>
         </div>

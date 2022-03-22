@@ -13,9 +13,9 @@ function App() {
   return (
     <>
       <div className='container'>
-        <Headers></Headers>
-        <Nav></Nav>
-        <Footer></Footer>
+        <Headers />
+        <Nav />
+        <Footer />
         <Routes>
           <Route path="/" element={<Front />} />
           <Route path="/market" element={<Market />} />
@@ -26,7 +26,5 @@ function App() {
       </div>
     </>
   );
-
-
 }
 export default App;

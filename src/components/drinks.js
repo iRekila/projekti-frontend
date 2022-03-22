@@ -3,11 +3,11 @@ import React from 'react';
 
 
 export default function Drinks() {
-  return ( 
-  <html>
+  return (
+    <html>
 
-    <h1 id="otsikot">drinks drinks drinks</h1>
+      <h1 id="otsikot">drinks drinks drinks</h1>
 
-  </html>
-) 
+    </html>
+  )
 }
