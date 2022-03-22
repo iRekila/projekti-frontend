@@ -47,7 +47,7 @@
 
 
 body {
-  background-color: #F5F5DC;
+  background-color:white;
 }
 #text1 {
   color:#1E261E;
@@ -66,12 +66,17 @@ body {
   border-color: #CEAE2C;
   color: #1E261E;
   font-size: 40px;
-  
 }
 #readmore:hover {
-
   background-color: #1E261E;
   color: #CEAE2C;
   border-color: #1E261E;
+}
+
+#text2 {
+  color:#1E261E;
+  text-decoration: none;
+  font-family: 'Josefin Sans',sans-serif;
+  font-size: 26px;
 }
 

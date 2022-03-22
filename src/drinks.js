@@ -24,7 +24,6 @@ export default function Drinks() {
             <li><Link to='/market' style={{ textDecoration: 'none' }}><a href="/market" id="texts" class="px-2">MARKET</a></Link></li>
             <li><Link to='/drinks' style={{ textDecoration: 'none' }}><a href="/drinks" id="texts" class="px-2">DRINKS</a></Link></li>
             <li><Link to='/contact' style={{ textDecoration: 'none' }}><a href="/contact" id="texts" class="px-2">CONTACT</a></Link></li>
-            <li><Link to='/about' style={{ textDecoration: 'none' }}><a href="/about" id="texts" class="px-2">ABOUT BEER</a></Link></li>
           </ul>
         </header>
       </div>

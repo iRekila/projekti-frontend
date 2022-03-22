@@ -4,7 +4,7 @@ import './App.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Front() {
+export default function Readmore() {
   return (
     <html>
       <head>
@@ -15,7 +15,6 @@ export default function Front() {
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
       </head>
-
       <div class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <img src={logo} class="App-logo" alt="logo" />
       </div>
@@ -33,25 +32,23 @@ export default function Front() {
 
       <div class="container">
         <div class="row">
-          <div class="col-sm">
-            <img src={wheat} id="wheat"></img>
-          </div>
           <div id="div_text" class="col-sm">
             <h1>WHO WE ARE</h1>
-            <a id="text1"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            <a id="text2"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
               nonummy nibh euismod tincidunt
               ut laoreet dolore magna aliquam
               erat volutpat. Ut wisi enim ad
               minim veniam, quis nostrud exerci
-              tation ullamcorp
-            </a>
-            <div class="container">
-              <Link to="/about"><button type="button" id="readmore" data-toggle="collapse" data-target="#textbox">READ MORE</button></Link>
-              <div id="textbox" class="collapse">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+              tation ullamcorp                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </div>
+            </a>
+            <div class="container">
+              <Link to="/"><button type="button" id="readmore" data-toggle="collapse" data-target="#textbox">READ LESS</button></Link>
+                
+              
             </div>
           </div>
         </div>

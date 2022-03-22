@@ -14,7 +14,6 @@ export default function Market() {
       </head>
   
 
-
       <div class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <img src={logo} class="App-logo" alt="logo" />
       </div>
@@ -25,7 +24,6 @@ export default function Market() {
             <li><Link to='/market' style={{ textDecoration: 'none' }}><a href="/market" id="texts" class="px-2">MARKET</a></Link></li>
             <li><Link to='/drinks' style={{ textDecoration: 'none' }}><a href="/drinks" id="texts" class="px-2">DRINKS</a></Link></li>
             <li><Link to='/contact' style={{ textDecoration: 'none' }}><a href="/contact" id="texts" class="px-2">CONTACT</a></Link></li>
-            <li><Link to='/about' style={{ textDecoration: 'none' }}><a href="/about" id="texts" class="px-2">ABOUT BEER</a></Link></li>
           </ul>
         </header>
       </div>
