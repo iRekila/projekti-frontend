@@ -2,10 +2,17 @@ import wheat from '../images/wheat.jpg'
 import '../App.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Headers from '../components/headers';
+import Nav from '../components/nav';
+import Footer from '../components/footer';
 
 export default function Front() {
   return (
     <html>
+    <Headers/>
+    <Nav/>
+    <Footer />
+
       <div class="container">
         <div class="row">
           <div class="col-sm">
