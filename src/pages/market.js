@@ -1,11 +1,13 @@
 import '../App.css';
 import React from 'react';
+import Cards from '../components/cards';
 
 export default function Market() {
   return (
     <html>
-
-      <h1 id="otsikot">marketti</h1>
+    <Cards/>
+    
+    
 
     </html>
   )

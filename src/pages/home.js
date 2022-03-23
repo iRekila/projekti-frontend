@@ -1,5 +1,4 @@
-import logo from './fg.png';
-import wheat from './wheat.jpg'
+import wheat from '../images/wheat.jpg'
 import '../App.css';
 import React from 'react';
 import { Link } from 'react-router-dom';

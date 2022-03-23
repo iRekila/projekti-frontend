@@ -1,13 +1,14 @@
 import './App.css';
-import Market from './components/market.js';
-import Front from './components/home.js';
-import Drinks from './components/drinks';
-import Contact from './components/contact';
-import Readmore from './components/readmore';
+import Market from './pages/market.js';
+import Front from './pages/home.js';
+import Drinks from './pages/drinks';
+import Contact from './pages/contact';
+import Readmore from './pages/readmore';
 import Nav from './components/nav';
-import { Routes, Route } from 'react-router-dom';
 import Footer from './components/footer';
 import Headers from './components/headers';
+import { Routes, Route } from 'react-router-dom';
+
 
 function App() {
   return (
