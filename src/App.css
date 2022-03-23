@@ -83,3 +83,9 @@ body {
 #cards {
   width: 18rem;
 }
+
+#notfound {
+  color:red;
+  text-decoration: none;
+  font-family: 'Concert One';
+}

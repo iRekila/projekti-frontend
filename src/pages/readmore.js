@@ -1,10 +1,16 @@
 import '../App.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Nav from '../components/nav';
+import Footer from '../components/footer';
+import Headers from '../components/headers';
 
 export default function Readmore() {
   return (
     <html>
+    <Headers />
+    <Nav />
+    <Footer />
       <div class="container">
         <div class="row">
           <div id="div_text" class="col-sm">
