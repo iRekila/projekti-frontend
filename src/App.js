@@ -9,10 +9,10 @@ import Footer from './components/footer';
 import Headers from './components/headers';
 import { Routes, Route } from 'react-router-dom';
 
-
 function App() {
-  return (
-    <>
+
+return (
+  
       <div className='container'>
         <Headers />
         <Nav />
@@ -25,7 +25,6 @@ function App() {
           <Route path="/about" element={<Readmore />} />
         </Routes>
       </div>
-    </>
   );
 }
 export default App;

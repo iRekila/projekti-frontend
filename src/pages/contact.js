@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <html>
 
-      <h1 id="otsikot">contact aosdosadodksakokoskaodaso</h1>
+      <h1 id="otsikot">contact: jami.fi</h1>
 
     </html>
   )

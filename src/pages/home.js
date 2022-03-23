@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 export default function Front() {
   return (
     <html>
-
       <div class="container">
         <div class="row">
           <div class="col-sm">
@@ -34,6 +33,4 @@ export default function Front() {
       </div>
     </html>
   )
-
 }
-
