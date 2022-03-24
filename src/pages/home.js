@@ -28,7 +28,7 @@ export default function Front() {
               tation ullamcorp
             </a>
             <div class="container">
-              <Link to="/about"><button type="button" id="readmore" data-toggle="collapse" data-target="#textbox">READ MORE</button></Link>
+              <Link to="/readmore"><button type="button" id="readmore" data-toggle="collapse" data-target="#textbox">READ MORE</button></Link>
               <div id="textbox" class="collapse">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
