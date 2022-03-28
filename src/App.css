@@ -1,5 +1,6 @@
 .App-logo {
   width: 400px;
+  padding-top: 30px;
 }
 #container {
 
@@ -58,6 +59,7 @@
   height:500px; margin-left:-15px;
   padding-right: 100px;
   padding-top: 40px;
+  padding-bottom: 90px;
 }
 
 .thumbnail {
@@ -124,4 +126,5 @@ body {
 
 #rd {
   padding-top: 30px;
+  padding-bottom: 100px;
 }
