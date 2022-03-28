@@ -10,7 +10,7 @@
 }
 
 
-#texts {
+.texts {
   text-decoration: none;
   font-family: 'Concert One' ;
   font-size: 60px;
@@ -18,6 +18,41 @@
   padding-top: 40px;
   color: #1E261E;
 }
+
+.market {
+  
+    text-decoration: none;
+    font-family: 'Concert One' ;
+    font-size: 60px;
+    padding-right: 30px;
+    color: #1E261E;
+  
+}
+
+.texts:hover {
+  color:#CEAE2C;
+  text-decoration: none;
+ } 
+
+ 
+.market:hover {
+  color:#CEAE2C;
+  text-decoration: none;
+ } 
+
+ #categories {
+  text-decoration: none;
+  font-family: 'Josefin Sans',sans-serif;
+  color: #1E261E;
+  text-transform: uppercase;
+  font-size: 24px;
+ }
+
+ #categories:hover {
+  color:#CEAE2C;
+  text-decoration: none;
+ }
+
 
 #wheat {
   height:500px; margin-left:-15px;
@@ -54,10 +89,7 @@ body {
   text-decoration: none;
   font-family: 'Josefin Sans',sans-serif;
 }
-#texts:hover {
- color:#CEAE2C;
- text-decoration: none;
-} 
+
 #readmore_div {
   padding-top: 50px;
 }
