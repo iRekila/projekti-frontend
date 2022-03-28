@@ -20,20 +20,10 @@ export default function Front() {
           </div>
           <div id="div_text" class="col-sm">
             <h1>WHO WE ARE</h1>
-            <a id="text1"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt
-              ut laoreet dolore magna aliquam
-              erat volutpat. Ut wisi enim ad
-              minim veniam, quis nostrud exerci
-              tation ullamcorp
+            <a id="text1"> Finnish Bear Beer is a company providing domestic craft brewery products. We offer constantly changing products for people who are just as passionate about supporting domestic companies as we are. 
             </a>
-            <div class="container">
+            <div class="container" id="rd">
               <Link to="/readmore"><button type="button" id="readmore" data-toggle="collapse" data-target="#textbox">READ MORE</button></Link>
-              <div id="textbox" class="collapse">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </div>
             </div>
           </div>
         </div>
