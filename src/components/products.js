@@ -9,7 +9,7 @@ export default function Products({ url, addToCart }) {
     let params = useParams();
 
     useEffect(() => {
-        axios.get(url + 'products/getproducts.php' + params.categoryId)
+        axios.get(url + 'products/getproducts.php/' + params.categoryId)
             .then((response) => {
                 const json = response.data;
                 setCategoryName(json.category);
