@@ -9,15 +9,12 @@ export default function Nav({ url,cart }) {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        console.log(url);
         axios.get(url + 'products/getcategories.php')
             .then((response) => {
                 const json = response.data;
                 setCategories(json);
-                console.log(json)
             }).catch(error => {
-                alert(error.response === undefined ? error : error.response.data.error)
-
+                alert(error.response === undefined ? error : error.response.data.error);
             })
     }, [])
 
