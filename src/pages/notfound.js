@@ -1,7 +1,6 @@
 import '../App.css';
 import { Link } from 'react-router-dom';
-import React from 'react';
-import Headers from '../components/headers';
+import React from 'react'
 export default function NotFound() {
   return (
     <html>

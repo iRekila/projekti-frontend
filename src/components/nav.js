@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import logo from "../images/fg.png"
 import axios from "axios";
+import Cart from "./cart";
 
-export default function Nav({ url }) {
+export default function Nav({ url,cart }) {
 
     const [categories, setCategories] = useState([]);
 
@@ -46,6 +47,7 @@ export default function Nav({ url }) {
                         <li><Link to='/drinks' style={{ textDecoration: 'none' }}><a href="/drinks" class="texts" >DRINKS</a></Link></li>
                         <li><Link to='/contact' style={{ textDecoration: 'none' }}><a href="/contact" class="texts" >CONTACT</a></Link></li>
                         <li><Link to='/about' style={{ textDecoration: 'none' }}><a href="/contact" class="texts" >ABOUT BEER</a></Link></li>
+                        <Cart cart={cart} />
                     </ul>
                 </header>
             </div>
