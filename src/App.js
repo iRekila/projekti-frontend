@@ -9,7 +9,8 @@ import React, { useEffect, useState } from 'react';
 import Nav from './components/nav.js';
 import Headers from './components/headers';
 import Footer from './components/footer'
-import Products from './pages/products';
+import Products from './components/products';
+import Order from './components/order';
 
 const URL = 'http://localhost/verkkopalveluprojekti-backend/'
 
@@ -24,11 +25,31 @@ function App() {
   }, [])
 
   function addToCart(product) {
+    if (cart.some(item => item.tuotenro === product.tuotenro)) {
+      const existingProduct = cart.filter(item => item.tuotenro === product.tuotenro);
+      updateAmount(parseInt(existingProduct[0].amount) +1,product);
+    } else {
+
+    product['amount'] = 1;
     const newCart = [...cart,product];
     setCart(newCart);
     localStorage.setItem('cart',JSON.stringify(newCart));
   }
+  }
    
+  function removeFromCart(product) {
+    const itemsWithoutRemoved = cart.filter(item => item.tuotenro !== product.tuotenro)
+    setCart(itemsWithoutRemoved);
+    localStorage.setItem('cart',JSON.stringify(itemsWithoutRemoved));
+  }
+
+  function updateAmount(amount, product) {
+    product.amount = amount;
+    const index = cart.findIndex((item => item.tuotenro === product.tuotenro));
+    const modifiedCart = Object.assign([...cart],{[index]: product});
+    setCart(modifiedCart);
+    localStorage.setItem('cart',JSON.stringify(modifiedCart));
+  }
   
   return (
     
@@ -43,6 +64,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/readmore" element={<Readmore />} />
         <Route path="/*" element={<NotFound />} />
+        <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} />} />
         </Routes>
       </div>  
 
