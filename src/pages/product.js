@@ -21,8 +21,8 @@ export default function Product({url}) {
         <div>
             <h3>Product {product}</h3>
             {product.map(product => (
-                <div key={product.tuotenro}>
-                    {product.tuotenimi}
+                <div key={product.id}>
+                    {product.name}
                 </div>
             ))}
         </div>

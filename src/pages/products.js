@@ -24,9 +24,9 @@ export default function Products({ url, addToCart }) {
         <div>
             <h3>Products for {categoryName}</h3>
             {products.map(product => (
-                <div key={product.tuotenro}>
+                <div key={product.id}>
                     <Link
-                        id="product" to={'/product/' + product.tuotenro}>{product.tuotenimi}
+                        id="product" to={'/product/' + product.id}>{product.name}
                     </Link>
                     <button className="btn btn-primary" type="button" onClick={e => addToCart(product)}>Add</button>
                 </div>

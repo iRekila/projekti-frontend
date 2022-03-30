@@ -32,12 +32,12 @@ export default function Order({ cart,removeFromCart,updateAmount }) {
             <table className="table">
                 <tbody>
                     {cart.map((product,index) => {
-                        sum+=parseFloat((product.hinta * product.amount).toFixed(2));
+                        sum+=parseFloat((product.price * product.amount).toFixed(2));
                         sum2+=parseFloat(product.amount)
                         return (
                             <tr key={uuid()}>
-                                <td>{product.tuotenimi}</td>
-                                <td>{(product.hinta * product.amount).toFixed(2)} €</td>
+                                <td>{product.name}</td>
+                                <td>{(product.price * product.amount).toFixed(2)} €</td>
                                 <td>
                                     <input ref={inputs[index]} style={{width: '60px'}} defaultValue={product.amount} onChange={e => changeAmount(e,product,index)} />
                                 </td>

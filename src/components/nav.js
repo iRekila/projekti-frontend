@@ -33,7 +33,7 @@ export default function Nav({ url,cart }) {
                             </li>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 {categories.map(category => (
-                                    <li><Link id="categories" to={'/products/' + category.trnro}>{category.trnimi}</Link></li>
+                                    <li><Link id="categories" to={'/products/' + category.id}>{category.name}</Link></li>
                                 ))}
                             </div>
                         </div>
