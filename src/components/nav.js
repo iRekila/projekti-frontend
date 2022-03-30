@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import logo from "../images/fg.png"
 import axios from "axios";
-import Cart from "./cart";
+import Cart from "./cart.js";
 
 export default function Nav({ url,cart }) {
 
@@ -29,7 +29,7 @@ export default function Nav({ url,cart }) {
                         <li><Link to='/' style={{ textDecoration: 'none' }} ><a href="/" className="texts">HOME</a></Link></li>
                         <div class="dropdown">
                             <li className="market" style={{ textDecoration: 'none' }} id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                MARKET
+                                SHOP
                             </li>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 {categories.map(category => (
@@ -41,9 +41,8 @@ export default function Nav({ url,cart }) {
                                 ))}
                             </div>
                         </div>
-                        <li><Link to='/drinks' style={{ textDecoration: 'none' }}><a href="/drinks" class="texts" >DRINKS</a></Link></li>
-                        <li><Link to='/contact' style={{ textDecoration: 'none' }}><a href="/contact" class="texts" >CONTACT</a></Link></li>
                         <li><Link to='/about' style={{ textDecoration: 'none' }}><a href="/contact" class="texts" >ABOUT BEER</a></Link></li>
+                        <li><Link to='/contact' style={{ textDecoration: 'none' }}><a href="/contact" class="texts" >CONTACT</a></Link></li>
                         <Cart cart={cart} />
                     </ul>
                 </header>

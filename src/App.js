@@ -1,6 +1,5 @@
 import './App.css';
 import Front from './pages/home.js';
-import Drinks from './pages/drinks';
 import Contact from './pages/contact';
 import Readmore from './pages/readmore';
 import NotFound from './pages/notfound';
@@ -10,7 +9,7 @@ import React, { useEffect, useState } from 'react';
 import Nav from './components/nav.js';
 import Headers from './components/headers';
 import Footer from './components/footer'
-import Products from './components/products';
+import Products from './pages/products';
 
 const URL = 'http://localhost/verkkopalveluprojekti-backend/'
 
@@ -39,11 +38,10 @@ function App() {
       <Nav url={URL} cart={cart}/>
       <Routes>
         <Route path="/" element={<Front />} />
-        <Route path="/drinks" element={<Drinks />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/products/:categoryId" element={<Products url={URL} addToCart={addToCart} />} />
-        <Route path="/readmore" element={<Readmore />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/readmore" element={<Readmore />} />
         <Route path="/*" element={<NotFound />} />
         </Routes>
       </div>  
