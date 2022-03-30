@@ -26,12 +26,12 @@ export default function Products({ url, addToCart }) {
             {products.map(product => (
                 <div id="order_text" key={product.id}>
                     <Link id="product" className="product" style={{ textDecoration: 'none' }} to={'/product/' + product.id}>
-                        <div class="card">
-                            <div class="card-body">
+                        <div className="card">
+                            <div className="card-body">
                                 IMAGE PLACEHOLDER
-                                <h5 class="card-title">{product.name}</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">{product.price} €</small></p>
+                                <h5 className="card-title">{product.name}</h5>
+                                <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p className="card-text"><small className="text-muted">{product.price} €</small></p>
                             </div>
                         </div>
                     </Link>

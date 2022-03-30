@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import uuid from 'react-uuid';
 
 
-
 export default function Order({ cart,removeFromCart,updateAmount }) {
     const [inputs,_] = useState([]);
     const [inputIndex, setInputIndex] = useState(-1);

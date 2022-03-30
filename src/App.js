@@ -66,7 +66,7 @@ function App() {
           <Route path="/readmore" element={<Readmore />} />
           <Route path="/product/:productId" element={<Product url={URL}/>} />
           <Route path="/*" element={<NotFound />} />
-          <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} />} />
+          <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} />} />
         </Routes>
       </div> 
       <Footer/> 
