@@ -41,7 +41,7 @@ export default function Nav({ url,cart }) {
                         <li><Link to='/contact' style={{ textDecoration: 'none' }}><a href="/contact" className="texts" >CONTACT</a></Link></li>
                         <form className="d-flex">
                             <input className="form-control me-2" type="search" placeholder="Search products" aria-label="Search"/>
-                            <button className="btn btn-outline-success" type="submit">Search</button>
+                            <button className="btn btn-primary" style={{ backgroundColor: '#1E261E', borderColor: '#1E261E' }} type="submit">Search</button>
                         </form>
                         <Cart cart={cart} />
                     </ul>
