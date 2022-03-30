@@ -28,14 +28,14 @@ export default function Order({ cart,removeFromCart,updateAmount }) {
 
     return (
         <div>
-            <h3 className="header">ITEMS IN CART</h3>
+            <h3 className="header" id="order">ITEMS IN CART</h3>
             <table className="table">
                 <tbody>
                     {cart.map((product,index) => {
                         sum+=parseFloat((product.price * product.amount).toFixed(2));
                         sum2+=parseFloat(product.amount)
                         return (
-                            <tr key={uuid()}>
+                            <tr id="order_text"key={uuid()}>
                                 <td>{product.name}</td>
                                 <td>{(product.price * product.amount).toFixed(2)} €</td>
                                 <td>
@@ -45,10 +45,10 @@ export default function Order({ cart,removeFromCart,updateAmount }) {
                             </tr>
                         )
                     })}
-                    <tr key={uuid()}>
+                    <tr id="order_text" key={uuid()}>
                         <td>All items</td>
                         <td>{sum.toFixed(2)} €</td>
-                        <td>{sum2}</td>
+                        <td>{sum2} x</td>
                         <td></td>
                     </tr>
                 </tbody>
