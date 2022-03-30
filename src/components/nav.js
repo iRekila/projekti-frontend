@@ -33,16 +33,16 @@ export default function Nav({ url,cart }) {
                             </li>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 {categories.map(category => (
-                                    <li>
-                                        <Link
-                                           id="categories" to={'/products/' + category.trnro}>{category.trnimi}
-                                        </Link>
-                                    </li>
+                                    <li><Link id="categories" to={'/products/' + category.trnro}>{category.trnimi}</Link></li>
                                 ))}
                             </div>
                         </div>
                         <li><Link to='/about' style={{ textDecoration: 'none' }}><a href="/about" class="texts" >ABOUT BEER</a></Link></li>
                         <li><Link to='/contact' style={{ textDecoration: 'none' }}><a href="/contact" class="texts" >CONTACT</a></Link></li>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search products" aria-label="Search"/>
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
                         <Cart cart={cart} />
                     </ul>
                 </header>
