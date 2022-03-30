@@ -25,7 +25,7 @@ export default function Nav({ url,cart }) {
             </div>
             <div className="container-fluid">
                 <header id="header" class="">
-                    <ul id="header_ul" class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                    <ul id="header_ul" class="nav col-12 col-md-auto mb-2 d-flex justify-content-between mb-md-0">
                         <li><Link to='/' style={{ textDecoration: 'none' }} ><a href="/" className="texts">HOME</a></Link></li>
                         <div class="dropdown">
                             <li className="market" style={{ textDecoration: 'none' }} id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -45,6 +45,7 @@ export default function Nav({ url,cart }) {
                         </form>
                         <Cart cart={cart} />
                     </ul>
+                    <hr class="mt-4"></hr>
                 </header>
             </div>
         </html >
