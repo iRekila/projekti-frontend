@@ -35,7 +35,7 @@ export default function Order({ cart,removeFromCart,updateAmount }) {
                         sum+=parseFloat((product.price * product.amount).toFixed(2));
                         sum2+=parseFloat(product.amount)
                         return (
-                            <tr id="order_text"key={uuid()}>
+                            <tr id="order_text" key={uuid()}>
                                 <td>{product.name}</td>
                                 <td>{(product.price * product.amount).toFixed(2)} €</td>
                                 <td>
