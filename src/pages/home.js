@@ -7,16 +7,16 @@ export default function Front() {
   return (
     <html>
 
-      <div class="container-fluid">
-        <div class="row mt-3">
-          <div class="col-sm">
+      <div className="container-fluid">
+        <div className="row mt-3">
+          <div className="col-sm">
             <img src={wheat} id="wheat"></img>
           </div>
-          <div id="div_text" class="col-sm">
+          <div id="div_text" className="col-sm">
             <h1>WHO WE ARE</h1>
             <a id="text1"> Finnish Bear Beer is a company providing domestic craft brewery products. We offer constantly changing products for people who are just as passionate about supporting domestic companies as we are. 
             </a>
-            <div class="container" id="rd">
+            <div className="container" id="rd">
               <Link to="/readmore"><button type="button" id="readmore" data-toggle="collapse" data-target="#textbox">READ MORE</button></Link>
             </div>
           </div>

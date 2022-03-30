@@ -36,7 +36,7 @@ function App() {
     const newCart = [...cart,product];
     setCart(newCart);
     localStorage.setItem('cart',JSON.stringify(newCart));
-  }
+    }
   }
    
   function removeFromCart(product) {
@@ -54,23 +54,23 @@ function App() {
   }
   
   return (
-    
-    <div className='container'>
+    <>
       <Headers/>
-      <Footer/>
       <Nav url={URL} cart={cart}/>
-      <Routes>
-        <Route path="/" element={<Front />} />
-        <Route path="/products/:categoryId" element={<Products url={URL} addToCart={addToCart} />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/readmore" element={<Readmore />} />
-        <Route path="/product/:productId" element={<Product url={URL}/>} />
-        <Route path="/*" element={<NotFound />} />
-        <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} />} />
+      <div className='container'>
+        <Routes>
+          <Route path="/" element={<Front />} />
+          <Route path="/products/:categoryId" element={<Products url={URL} addToCart={addToCart} />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/readmore" element={<Readmore />} />
+          <Route path="/product/:productId" element={<Product url={URL}/>} />
+          <Route path="/*" element={<NotFound />} />
+          <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} />} />
         </Routes>
-      </div>  
-
+      </div> 
+      <Footer/> 
+    </>
   );
 }
 export default App;

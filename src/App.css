@@ -13,6 +13,11 @@
   align-self: center;
 }
 
+#header {
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
 .d-flex > input {
   width: 20em;
 }
