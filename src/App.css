@@ -1,7 +1,18 @@
 .App-logo {
-  width: 400px;
-  padding-top: 30px;
+  height: 10em;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
+
+.d-flex {
+  height: 3em;
+  align-self: center;
+}
+
+#header_ul > a:last-child {
+  align-self: center;
+}
+
 #container {
 
     display: grid;
@@ -14,7 +25,7 @@
 .texts {
   text-decoration: none;
   font-family: 'Concert One' ;
-  font-size: 60px;
+  font-size: 40px;
   padding-right: 30px;
   padding-top: 40px;
   color: #1E261E;
@@ -24,7 +35,7 @@
   
     text-decoration: none;
     font-family: 'Concert One' ;
-    font-size: 60px;
+    font-size: 40px;
     padding-right: 30px;
     color: #1E261E;
     cursor:pointer;
