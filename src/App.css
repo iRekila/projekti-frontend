@@ -9,11 +9,6 @@
   align-self: center;
 }
 
-#header {
-  padding-left: 2em;
-  padding-right: 2em;
-}
-
 #header_ul > a:last-child {
   align-self: center;
 }

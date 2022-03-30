@@ -39,7 +39,7 @@ export default function Order({ cart,removeFromCart,updateAmount }) {
                                 <td>{product.tuotenimi}</td>
                                 <td>{(product.hinta * product.amount).toFixed(2)} €</td>
                                 <td>
-                                    <input ref={inputs[index]} style={{width: '60px'}} value={product.amount} onChange={e => changeAmount(e,product,index)} />
+                                    <input ref={inputs[index]} style={{width: '60px'}} defaultValue={product.amount} onChange={e => changeAmount(e,product,index)} />
                                 </td>
                                 <td> <a href="#" onClick={() => removeFromCart(product)}>Delete</a> </td>
                             </tr>
