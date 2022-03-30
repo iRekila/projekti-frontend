@@ -36,7 +36,9 @@
   padding-top: 40px;
   color: #1E261E;
 }
-
+.product {
+  color: #1E261E;
+}
 .market {
   text-decoration: none;
   font-family: 'Concert One' ;
@@ -68,6 +70,22 @@
 #categories:hover {
   color:#CEAE2C;
   text-decoration: none;
+}
+#order {
+  text-decoration: none;
+  font-family: 'Concert One',sans-serif;
+  color: #1E261E;
+  text-transform: uppercase;
+  font-size: 24px;
+  padding: 10px;
+}
+
+#order_text {
+  text-decoration: none;
+  font-family: 'Josefin Sans',sans-serif;
+  color: #1E261E;
+  font-size: 20px;
+  padding: 10px;
 }
 
 
