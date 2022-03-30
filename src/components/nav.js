@@ -41,7 +41,7 @@ export default function Nav({ url,cart }) {
                                 ))}
                             </div>
                         </div>
-                        <li><Link to='/about' style={{ textDecoration: 'none' }}><a href="/contact" class="texts" >ABOUT BEER</a></Link></li>
+                        <li><Link to='/about' style={{ textDecoration: 'none' }}><a href="/about" class="texts" >ABOUT BEER</a></Link></li>
                         <li><Link to='/contact' style={{ textDecoration: 'none' }}><a href="/contact" class="texts" >CONTACT</a></Link></li>
                         <Cart cart={cart} />
                     </ul>

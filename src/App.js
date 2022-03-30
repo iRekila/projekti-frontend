@@ -1,15 +1,16 @@
 import './App.css';
-import Front from './pages/home.js';
+import Front from './pages/home';
+import Products from './pages/products';
+import About from './pages/about';
 import Contact from './pages/contact';
 import Readmore from './pages/readmore';
+import Product from './pages/product';
 import NotFound from './pages/notfound';
-import About from './pages/about';
 import { Routes, Route } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
-import Nav from './components/nav.js';
+import Nav from './components/nav';
 import Headers from './components/headers';
 import Footer from './components/footer'
-import Products from './pages/products';
 
 const URL = 'http://localhost/verkkopalveluprojekti-backend/'
 
@@ -42,6 +43,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/readmore" element={<Readmore />} />
+        <Route path="/product/:productId" element={<Product url={URL}/>} />
         <Route path="/*" element={<NotFound />} />
         </Routes>
       </div>  
