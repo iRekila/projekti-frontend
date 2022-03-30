@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import uuid from 'react-uuid';
 
 
+
 export default function Order({ cart,removeFromCart,updateAmount }) {
     const [inputs,_] = useState([]);
     const [inputIndex, setInputIndex] = useState(-1);
     let sum = 0
+    let sum2 = 0
 
     useEffect(() => {
         for (let i = 0; i < cart.length; i++) {
@@ -30,11 +32,12 @@ export default function Order({ cart,removeFromCart,updateAmount }) {
             <table className="table">
                 <tbody>
                     {cart.map((product,index) => {
-                        sum+=parseFloat(product.hinta);
+                        sum+=parseFloat((product.hinta * product.amount).toFixed(2));
+                        sum2+=parseFloat(product.amount)
                         return (
                             <tr key={uuid()}>
                                 <td>{product.tuotenimi}</td>
-                                <td>{product.hinta} €</td>
+                                <td>{(product.hinta * product.amount).toFixed(2)} €</td>
                                 <td>
                                     <input ref={inputs[index]} style={{width: '60px'}} value={product.amount} onChange={e => changeAmount(e,product,index)} />
                                 </td>
@@ -45,7 +48,7 @@ export default function Order({ cart,removeFromCart,updateAmount }) {
                     <tr key={uuid()}>
                         <td>All items</td>
                         <td>{sum.toFixed(2)} €</td>
-                        <td></td>
+                        <td>{sum2}</td>
                         <td></td>
                     </tr>
                 </tbody>
