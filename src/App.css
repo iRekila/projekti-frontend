@@ -9,18 +9,24 @@
   align-self: center;
 }
 
+#header {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
 #header_ul > a:last-child {
   align-self: center;
 }
 
-#container {
-
-    display: grid;
-    gap: 15px;
-    grid-template-columns:  150px auto auto auto auto;
-
+.d-flex > input {
+  width: 20em;
 }
 
+#container {
+  display: grid;
+  gap: 15px;
+  grid-template-columns:  150px auto auto auto auto;
+}
 
 .texts {
   text-decoration: none;
@@ -32,44 +38,42 @@
 }
 
 .market {
-  
-    text-decoration: none;
-    font-family: 'Concert One' ;
-    font-size: 40px;
-    padding-right: 30px;
-    color: #1E261E;
-    cursor:pointer;
-  
+  text-decoration: none;
+  font-family: 'Concert One' ;
+  font-size: 40px;
+  padding-right: 30px;
+  color: #1E261E;
+  cursor:pointer;
 }
 
 .texts:hover {
   color:#CEAE2C;
   text-decoration: none;
- } 
+} 
 
- 
 .market:hover {
   color:#CEAE2C;
   text-decoration: none;
- } 
+} 
 
- #categories {
+#categories {
   text-decoration: none;
   font-family: 'Concert One',sans-serif;
   color: #1E261E;
   text-transform: uppercase;
   font-size: 24px;
   padding: 10px;
- }
+}
 
- #categories:hover {
+#categories:hover {
   color:#CEAE2C;
   text-decoration: none;
- }
+}
 
 
 #wheat {
-  height:500px; margin-left:-15px;
+  height:500px;
+  margin-left:-15px;
   padding-right: 100px;
   padding-top: 40px;
   padding-bottom: 90px;
@@ -95,10 +99,10 @@
   padding-top: 40px;
 }
 
-
 body {
   background-color:white;
 }
+
 #text1 {
   color:#1E261E;
   text-decoration: none;
@@ -108,12 +112,14 @@ body {
 #readmore_div {
   padding-top: 50px;
 }
+
 #readmore {
   background-color: #CEAE2C;
   border-color: #CEAE2C;
   color: #1E261E;
   font-size: 40px;
 }
+
 #readmore:hover {
   background-color: #1E261E;
   color: #CEAE2C;

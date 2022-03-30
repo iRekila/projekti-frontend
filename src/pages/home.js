@@ -7,8 +7,8 @@ export default function Front() {
   return (
     <html>
 
-      <div class="container">
-        <div class="row">
+      <div class="container-fluid">
+        <div class="row mt-3">
           <div class="col-sm">
             <img src={wheat} id="wheat"></img>
           </div>
