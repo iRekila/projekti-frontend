@@ -26,6 +26,7 @@ export default function Order({ cart,removeFromCart,updateAmount }) {
     }, [cart])
 
     return (
+
         <div>
             <h3 className="header" id="order">ITEMS IN CART</h3>
             <table className="table">
@@ -53,5 +54,6 @@ export default function Order({ cart,removeFromCart,updateAmount }) {
                 </tbody>
             </table>
         </div>
+
     )
 }
