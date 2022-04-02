@@ -55,6 +55,7 @@ function App() {
   
   return (
     <>
+    
       <Headers/>
       <Nav url={URL} cart={cart}/>
       <div className='container'>

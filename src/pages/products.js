@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
+import imagetest from "../images/wheat-bottle-can.png"
 
 export default function Products({ url, addToCart }) {
     const [categoryName, setCategoryName] = useState('');
@@ -28,9 +29,9 @@ export default function Products({ url, addToCart }) {
                     <Link id="product" className="product" style={{ textDecoration: 'none' }} to={'/product/' + product.id}>
                         <div className="card">
                             <div className="card-body">
-                                IMAGE PLACEHOLDER
+                            <img src={product.image} className="App-logo" alt="IMAGE PLACEHOLDER" />
                                 <h5 className="card-title">{product.name}</h5>
-                                <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p className="card-text">{product.description}</p>
                                 <p className="card-text"><small className="text-muted">{product.price} €</small></p>
                             </div>
                         </div>
