@@ -10,7 +10,8 @@ import { Routes, Route } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import Nav from './components/nav';
 import Headers from './components/headers';
-import Footer from './components/footer'
+import Footer from './components/footer';
+import Login from './components/login';
 import Order from './components/order';
 
 
@@ -55,7 +56,6 @@ function App() {
   
   return (
     <>
-    
       <Headers/>
       <Nav url={URL} cart={cart}/>
       <div className='container'>
@@ -67,6 +67,7 @@ function App() {
           <Route path="/readmore" element={<Readmore />} />
           <Route path="/product/:productId" element={<Product url={URL}/>} />
           <Route path="/*" element={<NotFound />} />
+          <Route path="/signin" element={<Login />} />
           <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} />} />
         </Routes>
       </div> 
