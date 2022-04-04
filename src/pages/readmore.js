@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function Readmore() {
   return (
-    <html>
-
-      <div className="container">
+    <div className="container">
         <div className="row">
           <div id="div_text" className="col-sm">
             <h1>WHO WE ARE</h1>
@@ -19,6 +17,5 @@ export default function Readmore() {
           </div>
         </div>
       </div>
-    </html>
   )
 }

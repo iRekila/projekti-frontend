@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import logo from "../images/fg.png"
 import axios from "axios";
+import Login from './login.js';
 import Cart from "./cart.js";
 
 export default function Nav({ url,cart }) {
@@ -19,7 +20,7 @@ export default function Nav({ url,cart }) {
     }, [])
 
     return (
-        <html>
+        <>
             <div className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                 <img src={logo} className="App-logo" alt="logo" />
             </div>
@@ -43,11 +44,12 @@ export default function Nav({ url,cart }) {
                             <input className="form-control me-2" type="search" style={{ backgroundColor: '#ffffff', borderColor: '#1E261E' }} placeholder="Search products" aria-label="Search"/>
                             <button className="btn btn-primary" style={{ backgroundColor: '#ffffff', borderColor: '#1E261E' }} type="submit"><svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="20px" height="20px"><path d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"/></svg></button>
                         </form>
+                        <Login />
                         <Cart cart={cart} />
                     </ul>
                     <hr className="mt-4"></hr>
                 </header>
             </div>
-        </html >
+        </>
     )
 }

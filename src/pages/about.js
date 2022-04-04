@@ -5,11 +5,9 @@ import React from 'react';
 export default function About() {
   return (
     
-    <html>
-
+    <div>
       <h1 id="otsikot">about: -</h1>
-
-    </html>
+    </div>
   )
 }
 
