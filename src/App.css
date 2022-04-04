@@ -9,7 +9,7 @@
   align-self: center;
 }
 
-#header_ul > a:last-child {
+#header_ul > a:last-child, #header_ul > a:nth-child(6) {
   align-self: center;
 }
 
@@ -31,21 +31,25 @@
 .texts {
   text-decoration: none;
   font-family: 'Concert One' ;
-  font-size: 40px;
+  font-size: 35px;
   padding-right: 30px;
-  padding-top: 40px;
+  text-align: center;
   color: #1E261E;
+  cursor: pointer;
 }
-.product {
-  color: #1E261E;
-}
+
 .market {
   text-decoration: none;
   font-family: 'Concert One' ;
-  font-size: 40px;
+  font-size: 35px;
   padding-right: 30px;
+  text-align: center;
   color: #1E261E;
-  cursor:pointer;
+  cursor: pointer;
+}
+
+.product {
+  color: #1E261E;
 }
 
 .texts:hover {
@@ -71,6 +75,7 @@
   color:#CEAE2C;
   text-decoration: none;
 }
+
 #order {
   text-decoration: none;
   font-family: 'Concert One',sans-serif;
@@ -87,7 +92,6 @@
   font-size: 20px;
   padding: 10px;
 }
-
 
 #wheat {
   height:500px;
@@ -115,6 +119,7 @@
   font-size: 20px;
   padding-right: 100px;
   padding-top: 40px;
+  text-align: center;
 }
 
 body {
@@ -135,7 +140,7 @@ body {
   background-color: #CEAE2C;
   border-color: #CEAE2C;
   color: #1E261E;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 #readmore:hover {
