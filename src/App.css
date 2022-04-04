@@ -109,8 +109,8 @@
   font-size:10px; color:#03225C;
 }
 
-#footer {
-  background-color: rgba(0, 0, 0, 0.2);
+footer {
+  background-color: #1E261E;
   font-family: 'Concert One'
 }
 
@@ -120,6 +120,7 @@
   padding-right: 100px;
   padding-top: 40px;
   text-align: center;
+  align-self: center;
 }
 
 body {
