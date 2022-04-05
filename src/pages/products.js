@@ -28,7 +28,7 @@ export default function Products({ url, addToCart }) {
                     <Link id="product" className="product" style={{ textDecoration: 'none' }} to={'/product/' + product.id}>
                         <div className="card">
                             <div className="card-body">
-                            <img src={product.image} className="App-logo" alt="IMAGE PLACEHOLDER" />
+                            <img src={url + 'images/' + product.image} className="App-logo" alt="productimage" />
                                 <h5 className="card-title">{product.name}</h5>
                                 <p className="card-text">{product.description}</p>
                                 <p className="card-text"><small className="text-muted">{product.price} €</small></p>
