@@ -11,7 +11,8 @@ import React, { useEffect, useState } from 'react';
 import Nav from './components/nav';
 import Headers from './components/headers';
 import Footer from './components/footer';
-import Login from './components/login';
+import Login from './components/signin';
+import Register from './components/register';
 import Order from './components/order';
 
 
@@ -68,6 +69,7 @@ function App() {
           <Route path="/product/:productId" element={<Product url={URL}/>} />
           <Route path="/*" element={<NotFound />} />
           <Route path="/signin" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} />} />
         </Routes>
       </div> 
