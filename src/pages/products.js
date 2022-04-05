@@ -24,9 +24,9 @@ export default function Products({ url, addToCart }) {
         <div>
             <h3 id="order">Products for {categoryName}</h3>
             {products.map(product => (
-                <div id="order_text" key={product.id}>
+                <div id="order_text" key={product.id} style={{ display: "inline-block", marginLeft: "auto", marginRight: "auto" }}>
                     <Link id="product" className="product" style={{ textDecoration: 'none' }} to={'/product/' + product.id}>
-                        <div className="card">
+                        <div className="card" style={{ width: "20em", marginRight: "1.5em" }}>
                             <div className="card-body">
                             <img src={url + 'images/' + product.image} className="App-logo" alt="productimage" />
                                 <h5 className="card-title">{product.name}</h5>
