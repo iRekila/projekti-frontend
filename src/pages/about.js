@@ -6,7 +6,7 @@ export default function About() {
   return (
     <div className="container">
         <div className="row">
-          <div id="div_text" className="col-sm">
+          <div id="div_text" className="col-sm" style={{ paddingLeft: "0", paddingRight: "0" }}>
             <h1>ABOUT BEER</h1>
               <p id="text3">Beer, it's the best damn drink in the world. -Jack Nicholson</p>
               <br></br>
