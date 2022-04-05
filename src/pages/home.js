@@ -11,8 +11,8 @@ export default function Front() {
             <div className="col-sm">
               <img src={wheat} id="wheat"></img>
             </div>
-            <div className="col-sm" id="div_text">
-              <h1>WHO WE ARE</h1>
+            <div className="col-sm" id="div_text" style={{ paddingLeft: "0", paddingRight: "0" }}>
+              <h1 style={{ marginBottom: "0.5em" }}>WHO WE ARE</h1>
               <a id="text1">
                 Finnish Bear Beer is a company providing domestic craft brewery products. We offer constantly changing products for people who are just as passionate about supporting domestic companies as we are. 
               </a>
