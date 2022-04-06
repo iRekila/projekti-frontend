@@ -23,6 +23,7 @@ export default function Products({ url, addToCart }) {
     return (
         <div>
             <h3 id="order" style={{ textAlign: "center" }}>{categoryName}</h3>
+            <h2 id="order">Products for {categoryName}</h2>
             {products.map(product => (
                 <div id="order_text" key={product.id} style={{ display: "inline-block", marginLeft: "auto", marginRight: "auto" }}>
                     <Link id="product" className="product" style={{ textDecoration: 'none' }} to={'/product/' + product.id}>
