@@ -64,7 +64,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/readmore" element={<Readmore />} />
-          <Route path="/product/:productId" element={<Product url={URL}/>} />
+          <Route path="/product/:productId" element={<Product url={URL} addToCart={addToCart}/>} />
           <Route path="/*" element={<NotFound />} />
           <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} />} />
         </Routes>
