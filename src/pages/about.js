@@ -1,20 +1,52 @@
-import '../App.css';
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
+export default function About({ url }) {
+    const [categories, setCategories] = useState([]);
 
-export default function About() {
-  return (
-    <div className="container">
-        <div className="row">
-          <div id="div_text" className="col-md" style={{ paddingLeft: "0", paddingRight: "0" }}>
-            <h1>ABOUT BEER</h1>
-              <p id="text3">Beer, it's the best damn drink in the world. -Jack Nicholson</p>
-              <br></br>
-              <p id="text4"> You know the best thing about craft beers? The variety of beer styles and flavours guarantees that everyone can find their favourite one. We chose the four different styles of craft beer because in our opinion they showcase different kinds of flavours really well. Lager is the most common around the world so it’s easy to start your tasting journey there and move on to different styles too. We are a group of six people who’s dream it was to bring domestic craft beers to everyone and since you have to chase your dreams, we just went ahead and did it. We hope you’ll enjoy them just as much as we do! Feedback gives us a chance to do better so we highly encourage you to do so by just clicking ’CONTACT’ on the navigation bar.
-              </p>
-          </div>
+    useEffect(() => {
+        axios.get(url + 'products/getcategories.php/')
+            .then((response) => {
+                const json = response.data;
+                setCategories(json);
+            }).catch(error => {
+                alert(error.response === undefined ? error : error.response.data.error);
+            })
+    }, [])
+
+    return (
+      <div className="container">
+        {categories.map(category => (
+          <div className="row">
+            <div className="col-sm">
+              <img src={url + 'images/' + category.image} className="App-logo" alt="categoryimage" />
+            </div>
+            <div className="col-sm">
+              <div className="row">
+                <div className="col-sm">
+                  <h2>{category.name}</h2>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-sm">
+                  <h5>{category.slogan}</h5>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-sm">
+                  <p>{category.description}</p>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-sm">
+                  <Link to={'/products/' + category.id}><button className="btn btn-dark" type="button">See Products</button></Link>
+                </div>
+              </div>
+            </div>
         </div>
+        ))}
     </div>
-  )
+    )
 }
 
