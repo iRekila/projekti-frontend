@@ -1,6 +1,7 @@
 import './App.css';
 import Front from './pages/home';
 import Products from './pages/products';
+import Add from './components/addcategory';
 import About from './pages/about';
 import Contact from './pages/contact';
 import Readmore from './pages/readmore';
@@ -61,10 +62,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Front />} />
           <Route path="/products/:categoryId" element={<Products url={URL} addToCart={addToCart} />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<About url={URL} />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/readmore" element={<Readmore />} />
           <Route path="/product/:productId" element={<Product url={URL} addToCart={addToCart}/>} />
+          <Route path="/addcategory" element={<Add url={URL} />} />
           <Route path="/*" element={<NotFound />} />
           <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} />} />
         </Routes>
