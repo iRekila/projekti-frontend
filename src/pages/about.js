@@ -40,7 +40,7 @@ export default function About({ url }) {
               </div>
               <div className="row">
                 <div className="col-sm">
-                  <Link to={'/products/' + category.id}><button className="btn btn-dark" type="button">See Products</button></Link>
+                  <Link to={'/products/' + category.id}><button className="btn btn-warning" type="button">SEE PRODUCTS</button></Link>
                 </div>
               </div>
             </div>

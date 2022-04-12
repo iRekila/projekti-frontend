@@ -185,3 +185,26 @@ body {
   font-size: 26px;
   padding-bottom: 30px;
 }
+
+.productimage {
+  height: 35em;
+  margin: 40px;
+}
+
+.name {
+  padding-top: 100px;
+  text-transform: uppercase;
+  font-family: 'Josefin Sans',sans-serif;
+  font-size: 50px;
+}
+
+.price {
+  padding: 30px;
+  font-family: 'Josefin Sans',sans-serif;
+}
+
+#btn {
+  margin-bottom: 50px;
+  font-family: 'Josefin Sans',sans-serif;
+  font-size: 20px;
+}

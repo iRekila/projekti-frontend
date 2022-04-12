@@ -24,7 +24,7 @@ export default function Products({ url, addToCart }) {
             <div className="container">
                 <div className="row">
                     <div className="col-sm">
-                        <h3 id="order" style={{ textAlign: "center", display: "block" }}>{categoryName}</h3>
+                        <h1 id="order" style={{ textAlign: "center", display: "block" }}>{categoryName}</h1>
                     </div>
                 </div>
                 <div className="row">
@@ -42,7 +42,7 @@ export default function Products({ url, addToCart }) {
                                     </div>
                                 </Link>
                                 <br />
-                                <button className="btn btn-dark" type="button" onClick={e => addToCart(product)}>Add To Cart</button>
+                                <button className="btn btn-warning" type="button" onClick={e => addToCart(product)}>ADD TO CART</button>
                             </div>
                             </div>
                         ))}
