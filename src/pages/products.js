@@ -20,11 +20,11 @@ export default function Products({ url, addToCart }) {
     }, [params])
 
     return (
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", marginTop: "2em", marginBottom: "3em" }}>
             <div className="container">
                 <div className="row">
                     <div className="col-sm">
-                        <h3 id="order" style={{ textAlign: "center", display: "block" }}>{categoryName}</h3>
+                        <h2 id="order" style={{ textAlign: "center", display: "block" }}>{categoryName}</h2>
                     </div>
                 </div>
                 <div className="row">
@@ -34,15 +34,16 @@ export default function Products({ url, addToCart }) {
                                 <Link id="product" className="product" style={{ textDecoration: 'none' }} to={'/product/' + product.id}>
                                     <div className="card" style={{ width: "18em", paddingLeft: "auto", paddingRight: "auto" }}>
                                         <div className="card-body">
-                                            <img src={url + 'images/' + product.image} className="App-logo" alt="productimage" />
-                                            <h5 className="card-title">{product.name}</h5>
-                                            <p className="card-text">{product.description}</p>
-                                            <p className="card-text"><small className="text-muted">{product.price} €</small></p>
+                                            <img src={url + 'images/' + product.image} className="App-logo" alt="productimage" style={{ display: "block", marginLeft: "auto", marginRight: "auto" }}></img>
+                                            <h5 className="card-title" style={{ textAlign: "center" }}>{product.name}</h5>
+                                            <p className="card-text" style={{ textAlign: "center" }}><small className="text-muted">{product.price} €</small></p>
                                         </div>
                                     </div>
                                 </Link>
                                 <br />
-                                <button className="btn btn-dark" type="button" onClick={e => addToCart(product)}>Add To Cart</button>
+                                <div style={{ display: "flex", justifyContent: "center" }}>
+                                    <button className="btn btn-dark" type="button" onClick={e => addToCart(product)}>Add To Cart</button>
+                                </div>
                             </div>
                             </div>
                         ))}
