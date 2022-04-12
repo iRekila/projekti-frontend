@@ -31,7 +31,7 @@
 .texts {
   text-decoration: none;
   font-family: 'Concert One' ;
-  font-size: 35px;
+  font-size: 30px;
   padding-right: 30px;
   text-align: center;
   color: #1E261E;
@@ -41,7 +41,7 @@
 .market {
   text-decoration: none;
   font-family: 'Concert One' ;
-  font-size: 35px;
+  font-size: 30px;
   padding-right: 30px;
   text-align: center;
   color: #1E261E;
@@ -82,6 +82,7 @@
   color: #1E261E;
   text-transform: uppercase;
   padding: 10px;
+  margin-bottom: 0.5em
 }
 
 #order_text {

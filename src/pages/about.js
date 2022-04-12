@@ -18,27 +18,27 @@ export default function About({ url }) {
     return (
       <div className="container">
         {categories.map(category => (
-          <div className="row">
+          <div className="row" style={{ marginTop: "3em", marginBottom: "3em" }}>
             <div className="col-sm">
-              <img src={url + 'images/' + category.image} className="App-logo" alt="categoryimage" />
+              <img src={url + 'images/' + category.image} className="App-logo" alt="categoryimage" style={{ display: "block", marginLeft: "auto", marginRight: "auto" }} />
             </div>
             <div className="col-sm">
-              <div className="row">
+              <div className="row" style={{ marginTop: "0.5em", marginBottom: "0.5em" }}>
                 <div className="col-sm">
                   <h2>{category.name}</h2>
                 </div>
               </div>
-              <div className="row">
+              <div className="row" style={{ marginTop: "0.5em", marginBottom: "0.5em" }}>
                 <div className="col-sm">
                   <h5>{category.slogan}</h5>
                 </div>
               </div>
-              <div className="row">
+              <div className="row" style={{ marginTop: "0.5em", marginBottom: "0.5em" }}>
                 <div className="col-sm">
                   <p>{category.description}</p>
                 </div>
               </div>
-              <div className="row">
+              <div className="row" style={{ marginTop: "0.5em", marginBottom: "0.5em" }}>
                 <div className="col-sm">
                   <Link to={'/products/' + category.id}><button className="btn btn-warning" type="button">SEE PRODUCTS</button></Link>
                 </div>
