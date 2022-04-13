@@ -5,8 +5,33 @@ import axios from "axios";
 export default function Products({ url, addToCart }) {
     const [categoryName, setCategoryName] = useState('');
     const [products, setProducts] = useState([]);
+    const [name, setName] = useState('');
 
     let params = useParams();
+
+    useEffect(() => {
+        let address = '';
+
+        if (params.searchPhrase === undefined) {
+            address = url + 'products/getproducts.php/' + params.categoryId;
+        } else {
+            address = url + 'products/searchproducts.php/' + params.searchPhrase;
+        }
+
+        axios.get(address)
+            .then((response) => {
+                const json = response.data;
+                if (params.searchPhrase === undefined) {
+                    setName(json.category);
+                    setProducts(json.products);
+                } else {
+                    setName(params.searchPhrase);
+                    setProducts(json);
+                }
+            }).catch(error => {
+                alert(error.response === undefined ? error : error.response.data.error);
+            })
+    }, [params])  
 
     useEffect(() => {
         axios.get(url + 'products/getproducts.php/' + params.categoryId)
