@@ -38,7 +38,7 @@ export default function Nav({ url,cart }) {
     return (
         <>
             <div className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <img src={logo} className="App-logo" alt="logo" />
+                <img src={logo} className="App-logo" alt="logo" style={{ display: "block", marginLeft: "auto", marginRight: "auto" }} />
             </div>
             <div className="container-fluid">
                 <header id="header" className="">
@@ -52,6 +52,7 @@ export default function Nav({ url,cart }) {
                                 {categories.map(category => (
                                     <li><Link id="categories" to={'/products/' + category.id}>{category.name}</Link></li>
                                 ))}
+                                <li><Link id="categories" to="/addcategory">ADD</Link></li>
                             </div>
                         </div>
                         <li><Link to='/about' style={{ textDecoration: 'none' }}><p className="texts" >ABOUT BEER</p></Link></li>
