@@ -5,8 +5,8 @@ import uuid from 'react-uuid';
 export default function Order({ cart,removeFromCart,updateAmount }) {
     const [inputs,_] = useState([]);
     const [inputIndex, setInputIndex] = useState(-1);
-    let sum = 0
-    let sum2 = 0
+    let sum = 0;
+    let sum2 = 0;
 
     useEffect(() => {
         for (let i = 0; i < cart.length; i++) {
@@ -33,7 +33,7 @@ export default function Order({ cart,removeFromCart,updateAmount }) {
                 <tbody>
                     {cart.map((product,index) => {
                         sum+=parseFloat((product.price * product.amount).toFixed(2));
-                        sum2+=parseFloat(product.amount)
+                        sum2+=parseFloat(product.amount * 1)
                         return (
                             <tr id="order_text" key={uuid()}>
                                 <td>{product.name}</td>

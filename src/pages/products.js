@@ -20,7 +20,7 @@ export default function Products({ url, addToCart }) {
     }, [params])
 
     return (
-        <div style={{ display: "flex", justifyContent: "space-between", marginTop: "2em", marginBottom: "3em" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", marginTop: "2em", marginBottom: "2em" }}>
             <div className="container">
                 <div className="row">
                     <div className="col-sm">
@@ -33,7 +33,7 @@ export default function Products({ url, addToCart }) {
                             <div className="col-sm" style={{ display: "flex", justifyContent: "space-between" }}>
                             <div id="order_text" key={product.id} style={{ marginLeft: "auto", marginRight: "auto" }}>
                                 <Link id="product" className="product" style={{ textDecoration: 'none' }} to={'/product/' + product.id}>
-                                    <div className="card" style={{ width: "18em", paddingLeft: "auto", paddingRight: "auto" }}>
+                                    <div className="card" style={{ width: "14em", paddingLeft: "auto", paddingRight: "auto", marginTop: "1em" }}>
                                         <div className="card-body">
                                             <img src={url + 'images/' + product.image} className="App-logo" alt="productimage" style={{ display: "block", marginLeft: "auto", marginRight: "auto" }}></img>
                                             <h5 className="card-title" style={{ textAlign: "center" }}>{product.name}</h5>
@@ -42,7 +42,7 @@ export default function Products({ url, addToCart }) {
                                     </div>
                                 </Link>
                                 <br />
-                                <div style={{ display: "flex", justifyContent: "center" }}>
+                                <div style={{ display: "flex", justifyContent: "center", marginBottom: "1em" }}>
                                     <button className="btn btn-warning" type="button" onClick={e => addToCart(product)}>ADD TO CART</button>
                                 </div>
                             </div>

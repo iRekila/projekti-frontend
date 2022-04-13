@@ -31,7 +31,7 @@ export default function Product({ url, addToCart }) {
                     </div>
                     <div className="row" style={{textAlign: "center"}}>
                         <div className="col-sm">
-                            <h2 className='price'>{product.price}</h2>
+                            <h2 className='price'>{product.price} €</h2>
                         </div>
                     </div>
                     <div className="row" style={{textAlign: "center"}}>
@@ -39,7 +39,7 @@ export default function Product({ url, addToCart }) {
                             <p>{product.description}</p>
                         </div>
                     </div>
-                    <div className="row" style={{textAlign: "center"}}>
+                    <div className="row" style={{textAlign: "center", marginTop: "2em"}}>
                         <div className="col-sm">
                         <button id="btn" className="btn btn-warning" type="button" onClick={e => addToCart(product)}>ADD TO CART</button>
                         </div>
