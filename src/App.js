@@ -1,7 +1,7 @@
 import './App.css';
 import Front from './pages/home';
 import Products from './pages/products';
-import Add from './components/addcategory';
+import Add from './components/add';
 import About from './pages/about';
 import Contact from './pages/contact';
 import Readmore from './pages/readmore';
@@ -71,7 +71,7 @@ function App() {
           <Route path="/contact" element={<Contact url={URL} />} />
           <Route path="/readmore" element={<Readmore />} />
           <Route path="/product/:productId" element={<Product url={URL} addToCart={addToCart}/>} />
-          <Route path="/addcategory" element={<Add url={URL} />} />
+          <Route path="/add" element={<Add url={URL} />} />
           <Route path="/*" element={<NotFound />} />
           <Route path="/order" element={<Order url={URL} cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} emptyCart={emptyCart} />} />
         </Routes>
