@@ -13,7 +13,7 @@ export default function Order({ url, cart, removeFromCart, updateAmount, empty }
     const [address, setAddress] = useState('');
     const [zip, setZip] = useState('');
     const [city, setCity] = useState('');
-    const [finished, setFinished] = (false);
+    const [finished, setFinished] = useState(false);
 
     useEffect(() => {
         for (let i = 0; i < cart.length; i++) {
