@@ -1,12 +1,19 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import uuid from 'react-uuid';
 
 
-export default function Order({ cart,removeFromCart,updateAmount }) {
+export default function Order({ url, cart, removeFromCart, updateAmount, empty }) {
     const [inputs,_] = useState([]);
     const [inputIndex, setInputIndex] = useState(-1);
     let sum = 0;
     let sum2 = 0;
+    const [firstname, setFirstname] = useState('');
+    const [lastname, setLastname] = useState('');
+    const [address, setAddress] = useState('');
+    const [zip, setZip] = useState('');
+    const [city, setCity] = useState('');
+    const [finished, setFinished] = ('');
 
     useEffect(() => {
         for (let i = 0; i < cart.length; i++) {
@@ -25,10 +32,35 @@ export default function Order({ cart,removeFromCart,updateAmount }) {
         }
     }, [cart])
 
+    function order(e) {
+        e.preventDefault();
+
+        const json = JSON.stringify({
+            firstname: firstname,
+            lastname: lastname,
+            address: address,
+            zip: zip,
+            city: city,
+            cart: cart,
+        });
+        axios.post(url + 'order/save.php/', json,{
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type' : 'application/json'
+            }
+        })
+        .then(() =>{
+            empty();
+            setFinished(true);
+        }).catch(error => {
+            alert(error.response === undefined ? error : error.response.data.error);
+        });
+    }
+
     return (
 
         <div>
-            <h3 className="header" id="order">ITEMS IN CART</h3>
+            <h1 className="header" id="order" style={{ marginTop: "1em" }}>ITEMS IN CART</h1>
             <table className="table">
                 <tbody>
                     {cart.map((product,index) => {
@@ -53,7 +85,43 @@ export default function Order({ cart,removeFromCart,updateAmount }) {
                     </tr>
                 </tbody>
             </table>
-        </div>
+            {cart.length > 0 &&
+            <>
+                <form onSubmit={order}>
 
+            <div className="form-outline mb-4" style={{ width: "41em", marginTop: "3em" }}>
+                <h1 style={{ marginBottom: "1em" }} id="order">CLIENT INFORMATION</h1>
+            </div>
+            <div className="form-outline mb-4" style={{ width: "41em" }}>
+
+                <h4>Full name:</h4>
+                <input type="text" name="fname" id="form2Example1" className="form-control" placeholder="First name" required style={{ width: "15em", display: "inline-block", marginRight: "1em" }} onChange={e => setFirstname(e.target.value)}/>
+                <input type="text" name="lname" id="form2Example1" className="form-control" placeholder="Last name" required style={{ width: "15em", display: "inline-block" }} onChange={e => setLastname(e.target.value)}/>
+            </div>
+
+            <div className="form-outline mb-4" style={{ width: "41em" }}>
+                <h4>Address:</h4>
+                <input type="text" name="email" id="form2Example1" className="form-control" placeholder="Address" required style={{ width: "31em", display: "inline-block" }} onChange={e => setAddress(e.target.value)}/>
+            </div>
+
+            <div className="form-outline mb-4" style={{ width: "41em" }}>
+                <h4>Postal code:</h4>
+                <input type="text" id="form2Example1" className="form-control" placeholder="Postal code" required style={{ width: "31em", display: "inline-block" }} onChange={e => setZip(e.target.value)}/>
+            </div>
+
+            <div className="form-outline mb-4" style={{ width: "41em" }}>
+                <h4>City:</h4>
+                <input type="text" id="form2Example1" className="form-control" placeholder="City" required style={{ width: "31em", display: "inline-block" }} onChange={e => setCity(e.target.value)}/>
+            </div>
+
+
+            <div className="form-outline mb-4" style={{ width: "41em" }}>
+                <button className="btn btn-warning btn-block mb-4">ORDER</button>
+            </div>
+
+                </form>
+            </>
+            }
+        </div>
     )
 }
