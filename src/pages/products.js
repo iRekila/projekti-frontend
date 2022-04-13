@@ -33,16 +33,6 @@ export default function Products({ url, addToCart }) {
             })
     }, [params])  
 
-    useEffect(() => {
-        axios.get(url + 'products/getproducts.php/' + params.categoryId)
-            .then((response) => {
-                const json = response.data;
-                setCategoryName(json.category);
-                setProducts(json.products);
-            }).catch(error => {
-                alert(error.response === undefined ? error : error.response.data.error);
-            })
-    }, [params])
 
     return (
         <div style={{ display: "flex", justifyContent: "space-between", marginTop: "2em", marginBottom: "2em" }}>
@@ -55,8 +45,8 @@ export default function Products({ url, addToCart }) {
                 </div>
                 <div className="row">
                         {products.map(product => (
-                            <div className="col-sm" style={{ display: "flex", justifyContent: "space-between" }}>
-                            <div id="order_text" key={product.id} style={{ marginLeft: "auto", marginRight: "auto" }}>
+                            <div className="col-sm" key={product.id} style={{ display: "flex", justifyContent: "space-between" }}>
+                            <div id="order_text"  style={{ marginLeft: "auto", marginRight: "auto" }}>
                                 <Link id="product" className="product" style={{ textDecoration: 'none' }} to={'/product/' + product.id}>
                                     <div className="card" style={{ width: "11em", height: "auto", paddingLeft: "auto", paddingRight: "auto", marginTop: "1em" }}>
                                         <div className="card-body">
