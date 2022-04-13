@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import uuid from 'react-uuid';
 
 
-export default function Order({ url, cart, removeFromCart, updateAmount, empty }) {
+export default function Order({ url, cart, removeFromCart, updateAmount, emptyCart }) {
     const [inputs,_] = useState([]);
     const [inputIndex, setInputIndex] = useState(-1);
     let sum = 0;
@@ -43,14 +43,14 @@ export default function Order({ url, cart, removeFromCart, updateAmount, empty }
             city: city,
             cart: cart,
         });
-        axios.post(url + 'order/save.php/', json,{
+        axios.post(url + 'order/save.php', json,{
             headers: {
                 'Accept': 'application/json',
                 'Content-Type' : 'application/json'
             }
         })
         .then(() =>{
-            empty();
+            emptyCart();
             setFinished(true);
         }).catch(error => {
             alert(error.response === undefined ? error : error.response.data.error);
@@ -125,6 +125,6 @@ export default function Order({ url, cart, removeFromCart, updateAmount, empty }
             </div>
         )
     } else {
-        return(<h3>Thank you for your order!</h3>)
+        return (<h3>Thank you for your order!</h3>);
     }
 }
