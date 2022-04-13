@@ -69,7 +69,9 @@ export default function Order({ url, cart, removeFromCart, updateAmount, emptyCa
                             return (
                                 <tr id="order_text" key={uuid()}>
                                     <td>{product.name}</td>
+                                    <td><img src={url + 'images/' + product.image} className="App-logo" alt="productimage" style={{ display: "block", marginLeft: "auto", marginRight: "auto", marginTop: "0", marginBottom: "1em", maxHeight: "200px"}}></img></td>
                                     <td>{(product.price * product.amount).toFixed(2)} €</td>
+                                    
                                     <td>
                                         <input type="number" min="0" ref={inputs[index]} style={{width: '60px'}} value={product.amount} onChange={e => changeAmount(e,product,index)} />
                                     </td>
