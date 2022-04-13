@@ -22,7 +22,7 @@ export default function Products({ url, addToCart }) {
             .then((response) => {
                 const json = response.data;
                 if (params.searchPhrase === undefined) {
-                    setName(json.category);
+                    setCategoryName(json.category);
                     setProducts(json.products);
                 } else {
                     setName(params.searchPhrase);
