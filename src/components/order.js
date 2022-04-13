@@ -61,7 +61,7 @@ export default function Order({ url, cart, removeFromCart, updateAmount, emptyCa
         return (
             <div>
                 <h1 className="header" id="order" style={{ marginTop: "1em" }}>ITEMS IN CART</h1>
-                <table className="table">
+                <table className="table" style={{ marginBottom: "3em" }}>
                     <tbody>
                         {cart.map((product,index) => {
                             sum+=parseFloat((product.price * product.amount).toFixed(2));
@@ -87,7 +87,7 @@ export default function Order({ url, cart, removeFromCart, updateAmount, emptyCa
                 </table>
                 {cart.length > 0 &&
                 <>
-                    <form onSubmit={order}>
+                    <form onSubmit={order} style={{ marginBottom: "3em" }}>
     
                 <div className="form-outline mb-4" style={{ width: "41em", marginTop: "3em" }}>
                     <h1 style={{ marginBottom: "1em" }} id="order">CLIENT INFORMATION</h1>

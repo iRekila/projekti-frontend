@@ -33,9 +33,9 @@ export default function Products({ url, addToCart }) {
                             <div className="col-sm" style={{ display: "flex", justifyContent: "space-between" }}>
                             <div id="order_text" key={product.id} style={{ marginLeft: "auto", marginRight: "auto" }}>
                                 <Link id="product" className="product" style={{ textDecoration: 'none' }} to={'/product/' + product.id}>
-                                    <div className="card" style={{ width: "14em", paddingLeft: "auto", paddingRight: "auto", marginTop: "1em" }}>
+                                    <div className="card" style={{ width: "11em", height: "auto", paddingLeft: "auto", paddingRight: "auto", marginTop: "1em" }}>
                                         <div className="card-body">
-                                            <img src={url + 'images/' + product.image} className="App-logo" alt="productimage" style={{ display: "block", marginLeft: "auto", marginRight: "auto" }}></img>
+                                            <img src={url + 'images/' + product.image} className="App-logo" alt="productimage" style={{ display: "block", marginLeft: "auto", marginRight: "auto", marginTop: "0", marginBottom: "1em" }}></img>
                                             <h5 className="card-title" style={{ textAlign: "center" }}>{product.name}</h5>
                                             <p className="card-text" style={{ textAlign: "center" }}><small className="text-muted">{product.price} €</small></p>
                                         </div>
