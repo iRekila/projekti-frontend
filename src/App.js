@@ -1,7 +1,8 @@
 import './App.css';
 import Front from './pages/home';
 import Products from './pages/products';
-import Add from './components/add';
+import ManageCategories from './pages/ManageCategories';
+import ManageProducts from './pages/ManageProducts';
 import About from './pages/about';
 import Contact from './pages/contact';
 import Readmore from './pages/readmore';
@@ -12,7 +13,7 @@ import React, { useEffect, useState } from 'react';
 import Nav from './components/nav';
 import Headers from './components/headers';
 import Footer from './components/footer';
-import Order from './components/order';
+import Order from './pages/order';
 
 
 const URL = 'http://localhost/verkkopalveluprojekti-backend/'
@@ -74,6 +75,8 @@ function App() {
           <Route path="/add" element={<Add url={URL} />} />
           <Route path="/*" element={<NotFound />} />
           <Route path="/order" element={<Order url={URL} cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} emptyCart={emptyCart} />} />
+          <Route path="/managecategories" element={<ManageCategories url={URL} />} />
+          <Route path="/manageproducts" element={<ManageProducts url={URL} />} />
         </Routes>
       </div> 
       <Footer/> 

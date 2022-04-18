@@ -52,7 +52,8 @@ export default function Nav({ url,cart }) {
                                 {categories.map(category => (
                                     <li><Link id="categories" to={'/products/' + category.id}>{category.name}</Link></li>
                                 ))}
-                                <li><Link id="categories" to="/add">ADD</Link></li>
+                                <li><Link id="categories" to="/managecategories">MANAGE CATEGORIES</Link></li>
+                                <li><Link id="categories" to="/manageproducts">MANAGE PRODUCTS</Link></li>
                             </div>
                         </div>
                         <li><Link to='/about' style={{ textDecoration: 'none' }}><p className="texts" >ABOUT BEER</p></Link></li>
