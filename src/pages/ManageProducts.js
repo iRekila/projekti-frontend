@@ -80,7 +80,7 @@ export default function ManageProducts({ url }) {
                     </table>
                 </div>
                 <div style={{ width: "30em", display: "block", marginLeft: "auto", marginRight: "auto" }}>
-                    <button className="btn btn-primary btn-block mb-4" onClick={() => setAddingProduct(true)} style={{ width: "10em", display: "block"}}>Add</button>
+                    <button className="btn btn-primary btn-block mb-4" onClick={() => setAddingProduct(true)} style={{ width: "10em", display: "block", marginTop: "2em" }}>Add</button>
                 </div>
             </>
         )
