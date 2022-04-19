@@ -28,32 +28,32 @@ export default function Contact({ url }) {
         <div className="col">
           <form onSubmit={sendFeedback}>
             <div className="form-outline mb-4" style={{ width: "41em", marginLeft: "auto", marginRight: "auto" }}>
-              <h3 style={{ marginBottom: "1em" }}>CONTACT / FEEDBACK</h3>
+              <h1 style={{ marginBottom: "1em", fontFamily: 'Concert One' }}>CONTACT / FEEDBACK</h1>
             </div>
             <div className="form-outline mb-4" style={{ width: "41em", marginLeft: "auto", marginRight: "auto" }}>
-              <h5>Full Name</h5>
+              <h4>Full Name</h4>
               <input type="text" name="fname" id="form2Example1" className="form-control" placeholder="First Name" value={fname} onChange={e => setFname(e.target.value)} required style={{ width: "15em", display: "inline-block", marginRight: "1em" }} />
               <input type="text" name="lname" id="form2Example1" className="form-control" placeholder="Last Name" value={lname} onChange={e => setLname(e.target.value)} required style={{ width: "15em", display: "inline-block" }} />
             </div>
             <div className="form-outline mb-4" style={{ width: "41em", marginLeft: "auto", marginRight: "auto" }}>
-              <h5>Email Address</h5>
-              <input type="text" name="email" id="form2Example1" className="form-control" value={email} onChange={e => setEmail(e.target.value)} required style={{ width: "31em", display: "inline-block" }} />
+              <h4>Email Address</h4>
+              <input type="text" name="email" id="form2Example1" className="form-control" placeholder="Email Address" value={email} onChange={e => setEmail(e.target.value)} required style={{ width: "31em", display: "inline-block" }} />
             </div>
             <div className="form-outline mb-4" style={{ width: "41em", marginLeft: "auto", marginRight: "auto" }}>
-              <h5>Message</h5>
-              <textarea name="message" id="form2Example1" className="form-control" value={message} onChange={e => setMessage(e.target.value)} required style={{ width: "31em", display: "inline-block", height: "15em" }}></textarea>
+              <h4>Message</h4>
+              <textarea name="message" id="form2Example1" className="form-control" placeholder="Type your message here" value={message} onChange={e => setMessage(e.target.value)} required style={{ width: "31em", display: "inline-block", height: "15em" }}></textarea>
             </div>
             <div className="form-outline mb-4" style={{ width: "41em", marginLeft: "auto", marginRight: "auto" }}>
-              <button className="btn btn-primary btn-block mb-4">Submit</button>
+              <button className="btn btn-warning btn-block mb-4">Submit</button>
             </div>
           </form>
         </div>
         <div className="col">
-          <h3 style={{ marginBottom: "1em" }}>CUSTOMER SERVICE</h3>
-          <p>Customer service is open</p>
-          <p>Mon-Fri 9-19 and Sat 9-17</p>
-          <p>Phone: 000 0000000</p>
-          <p>Email: contact@finnishbeerbear.fi</p>
+          <h1 style={{ marginBottom: "1em", fontFamily: 'Concert One' }}>CUSTOMER SERVICE</h1>
+          <p className='customer'>Customer service is open</p>
+          <p className='customer'>Mon-Fri 9-19 and Sat 9-17</p>
+          <p className='customer'>Phone: 000 0000000</p>
+          <p className='customer'>Email: contact@finnishbeerbear.fi</p>
         </div>
       </div>
     </div>

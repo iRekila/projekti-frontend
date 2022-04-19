@@ -36,7 +36,7 @@ export default function Product({ url, addToCart }) {
                     </div>
                     <div className="row" style={{textAlign: "center"}}>
                         <div className="col-sm">
-                            <p>{product.description}</p>
+                            <p className='customer'>{product.description}</p>
                         </div>
                     </div>
                     <div className="row" style={{textAlign: "center", marginTop: "2em"}}>
