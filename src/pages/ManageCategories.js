@@ -42,12 +42,24 @@ export default function ManageCategories({ url }) {
                 </div>
                 <div style={{ width: "30em", display: "block", marginLeft: "auto", marginRight: "auto" }}>
                     <h5 style={{ marginBottom: "1em" }}>Categories</h5>
-                    <CategoryList
-                        url={url}
-                        selectedCategory={selectedCategory}
-                        setSelectedCategory={setSelectedCategory}
-                    />
-                    <button className="btn btn-primary btn-block mb-4" onClick={() => setAddingCategory(true)} style={{ width: "10em", display: "block"}}>Add</button>
+                    <CategoryList url={url} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+                    <table className='table'>
+                        <thead>
+                            <tr>
+                                <th>Slogan</th>
+                                <th>Image</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <td>{selectedCategory?.slogan}</td>
+                                    <td><img src={url + 'images/' + selectedCategory?.image} className="App-logo" alt="productimage" style={{ marginTop: "1em", marginBottom: "1em" }} /></td>
+                                    <td>{selectedCategory?.description}</td>
+                                </tr>
+                        </tbody>
+                    </table>
+                    <button className="btn btn-primary btn-block mb-4" onClick={() => setAddingCategory(true)} style={{ width: "10em", display: "block", marginTop: "2em" }}>Add</button>
                 </div>
             </>
         )
