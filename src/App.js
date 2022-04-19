@@ -72,7 +72,6 @@ function App() {
           <Route path="/contact" element={<Contact url={URL} />} />
           <Route path="/readmore" element={<Readmore />} />
           <Route path="/product/:productId" element={<Product url={URL} addToCart={addToCart}/>} />
-          <Route path="/add" element={<Add url={URL} />} />
           <Route path="/*" element={<NotFound />} />
           <Route path="/order" element={<Order url={URL} cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} emptyCart={emptyCart} />} />
           <Route path="/managecategories" element={<ManageCategories url={URL} />} />
