@@ -228,3 +228,12 @@ h1 {
 .cname {
   font-size: 35px;
 }
+
+#log {
+  display: inline-block;
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  font-family: 'Concert One';
+  font-size: 30px;
+}
