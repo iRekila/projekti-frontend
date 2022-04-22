@@ -111,7 +111,7 @@
 
 footer {
   background-color: #1E261E;
-  font-family: 'Concert One'
+  padding: 30px;
 }
 
 #div_text {
@@ -236,4 +236,10 @@ h1 {
   color: black;
   font-family: 'Concert One';
   font-size: 30px;
+}
+
+.text-white {
+  font-family: 'Josefin Sans',sans-serif;
+  font-size: 18px;
+  text-decoration: none;
 }
