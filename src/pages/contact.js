@@ -49,11 +49,16 @@ export default function Contact({ url }) {
           </form>
         </div>
         <div className="col">
+          <div className="row">
           <h1 style={{ marginBottom: "1em", fontFamily: 'Concert One' }}>CUSTOMER SERVICE</h1>
           <p className='customer'>Customer service is open</p>
           <p className='customer'>Mon-Fri 9-19 and Sat 9-17</p>
           <p className='customer'>Phone: 000 0000000</p>
           <p className='customer'>Email: contact@finnishbeerbear.fi</p>
+          </div>
+          <div className="row">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53886.86632443504!2d25.418744817303274!3d65.03494147415142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd52c7bb803d%3A0x40f55b6d25f0d1db!2sOulun%20ammattikorkeakoulu!5e0!3m2!1sfi!2sfi!4v1650911735747!5m2!1sfi!2sfi" style={{ height:"450px", paddingBottom:"50px", paddingTop:"20px"}}  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
       </div>
     </div>
