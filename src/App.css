@@ -243,3 +243,8 @@ h1 {
   font-size: 18px;
   text-decoration: none;
 }
+
+li.link-wrapper > a.active {
+  background-color: black;
+  color: white;
+}

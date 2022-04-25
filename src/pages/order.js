@@ -132,7 +132,7 @@ export default function Order({ url, cart, removeFromCart, updateAmount, emptyCa
         return (
         <div className="container-fluid">
             <div className="container">
-                <h1 style={{ textAlign:'center', paddingLeft: '200px', paddingTop: '100px', fontFamily: 'Concert One, sans-serif'}}>Thank you for your order!</h1>
+                <h1 style={{ textAlign:'center', paddingLeft: '200px', paddingTop: '100px',  fontSize: '60px', paddingBottom: '50px'}}>Thank you for your order!</h1>
                 <img width={"450px"} src={cat} id="cat"></img>
             </div>
         </div>
