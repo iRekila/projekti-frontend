@@ -1,6 +1,8 @@
 import axios from "axios";
+import '../App.css';
 import React, { useEffect, useState } from "react";
 import uuid from 'react-uuid';
+import cat from '../images/cat.png';
 
 
 export default function Order({ url, cart, removeFromCart, updateAmount, emptyCart }) {
@@ -127,6 +129,13 @@ export default function Order({ url, cart, removeFromCart, updateAmount, emptyCa
             </div>
         )
     } else {
-        return (<h3>Thank you for your order!</h3>);
+        return (
+        <div className="container-fluid">
+            <div className="container">
+                <h1 style={{ textAlign:'center', paddingLeft: '200px', paddingTop: '100px', fontFamily: 'Concert One, sans-serif'}}>Thank you for your order!</h1>
+                <img width={"450px"} src={cat} id="cat"></img>
+            </div>
+        </div>
+        )
     }
 }

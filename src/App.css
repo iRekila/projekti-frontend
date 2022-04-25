@@ -164,7 +164,7 @@ body {
 }
 
 #notfound {
-  color: #CEAE2C;
+  font-size: 25px;
   text-decoration: none;
   font-family: 'Concert One';
 }
