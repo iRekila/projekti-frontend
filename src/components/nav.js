@@ -48,10 +48,11 @@ export default function Nav({ url,cart }) {
                             <li className="market" style={{ textDecoration: 'none' }} id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 SHOP
                             </li>
-                            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton" style={{ padding: "12px"}}>
                                 {categories.map(category => (
                                     <li><Link id="categories" to={'/products/' + category.id}>{category.name}</Link></li>
                                 ))}
+                                <hr className=""></hr>
                                 <li><Link id="categories" to="/managecategories">MANAGE CATEGORIES</Link></li>
                                 <li><Link id="categories" to="/manageproducts">MANAGE PRODUCTS</Link></li>
                             </div>
