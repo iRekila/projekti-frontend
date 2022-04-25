@@ -21,6 +21,9 @@ export default function Front() {
               </div>
             </div>
           </div>
+          <div className="row mt-3">
+            <h2 style={{ margin: "1em", textAlign:"center", fontFamily:"Concert One", fontSize:"45px" }}>NEW</h2>
+          </div>
         </div>
       </div>
   )
