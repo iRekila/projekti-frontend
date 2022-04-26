@@ -94,7 +94,7 @@ export default function Footer() {
     </section>
   </div>
   
-  <div className="text-center p-3" >
+  <div className="text-center p-3" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
     <a className="text-white" href="https://mdbootstrap.com/">© 2022 Copyright: TIK21SP SG3</a>
   </div>
   
