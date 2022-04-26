@@ -13,6 +13,8 @@ import React, { useEffect, useState } from 'react';
 import Nav from './components/nav';
 import Headers from './components/headers';
 import Footer from './components/footer';
+import Login from './components/signin';
+import Register from './components/Register';
 import Order from './pages/order';
 
 
@@ -73,6 +75,8 @@ function App() {
           <Route path="/readmore" element={<Readmore />} />
           <Route path="/product/:productId" element={<Product url={URL} addToCart={addToCart}/>} />
           <Route path="/*" element={<NotFound />} />
+          <Route path="/signin" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/order" element={<Order url={URL} cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} emptyCart={emptyCart} />} />
           <Route path="/managecategories" element={<ManageCategories url={URL} />} />
           <Route path="/manageproducts" element={<ManageProducts url={URL} />} />
