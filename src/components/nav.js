@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import logo from "../images/fg.png"
 import axios from "axios";
-import Login from './Login.js';
+import Login from './LogIn.js';
 import Cart from "./Cart.js";
 
 
