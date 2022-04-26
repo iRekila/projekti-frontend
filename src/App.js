@@ -1,21 +1,21 @@
 import './App.css';
-import Front from './pages/home';
-import Products from './pages/products';
-import ManageCategories from './pages/ManageCategories';
-import ManageProducts from './pages/ManageProducts';
-import About from './pages/about';
-import Contact from './pages/contact';
-import Readmore from './pages/readmore';
-import Product from './pages/product';
-import NotFound from './pages/notfound';
 import { Routes, Route } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
-import Nav from './components/nav';
-import Headers from './components/headers';
-import Footer from './components/footer';
-import Login from './components/signin';
+import Front from './pages/Home';
+import Products from './pages/Products';
+import ManageCategories from './pages/ManageCategories';
+import ManageProducts from './pages/ManageProducts';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Readmore from './pages/ReadMore';
+import Product from './pages/Product';
+import NotFound from './pages/NotFound';
+import Nav from './components/Nav';
+import Headers from './components/Header';
+import Footer from './components/Footer';
+import Login from './components/SignIn';
 import Register from './components/Register';
-import Order from './pages/order';
+import Order from './pages/Order';
 
 
 const URL = 'http://localhost/verkkopalveluprojekti-backend/'
