@@ -5,7 +5,7 @@ import axios from "axios";
 export default function Products({ url, addToCart }) {
     const [categoryName, setCategoryName] = useState('');
     const [products, setProducts] = useState([]);
-    const [name, setName] = useState('');
+    const [searchName, setSearchName] = useState('');
 
     let params = useParams();
 
@@ -20,13 +20,15 @@ export default function Products({ url, addToCart }) {
 
         axios.get(address)
             .then((response) => {
+                setSearchName("");
                 const json = response.data;
                 if (params.searchPhrase === undefined) {
                     setCategoryName(json.category);
                     setProducts(json.products);
                 } else {
-                    setName(params.searchPhrase);
+                    setSearchName(params.searchPhrase);
                     setProducts(json);
+                    setCategoryName("");
                 }
             }).catch(error => {
                 alert(error.response === undefined ? error : error.response.data.error);
@@ -39,7 +41,7 @@ export default function Products({ url, addToCart }) {
             <div className="container">
                 <div className="row">
                     <div className="col-sm">
-                        <h1 id="order" style={{ textAlign: "center", display: "block" }}>{categoryName}</h1>
+                        <h1 id="order" style={{ textAlign: "center", display: "block" }}>{categoryName}{searchName}</h1>
                         
                     </div>
                 </div>
