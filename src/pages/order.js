@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import uuid from 'react-uuid';
 import cat from '../images/cat.png';
 
-
 export default function Order({ url, cart, removeFromCart, updateAmount, emptyCart }) {
     const [inputs,_] = useState([]);
     const [inputIndex, setInputIndex] = useState(-1);
@@ -62,7 +61,7 @@ export default function Order({ url, cart, removeFromCart, updateAmount, emptyCa
     if (finished === false) {
         return (
             <div>
-                <h1 className="header" id="order" style={{ marginTop: "1em" }}>ITEMS IN CART</h1>
+                <h1 className="header" id="order" style={{ marginTop: "1.5em", marginBottom: "1em" }}>ITEMS IN CART</h1>
                 <table className="table" style={{ marginBottom: "3em" }}>
                     <tbody>
                         {cart.map((product,index) => {
@@ -83,59 +82,50 @@ export default function Order({ url, cart, removeFromCart, updateAmount, emptyCa
                         })}
                         <tr id="order_text" key={uuid()}>
                             <td>All items</td>
+                            <td>&nbsp;</td>
                             <td>{sum.toFixed(2)} €</td>
-                            <td>{sum2} x</td>
-                            <td></td>
+                            <td>x {sum2}</td>
+                            <td>&nbsp;</td>
                         </tr>
                     </tbody>
                 </table>
                 {cart.length > 0 &&
-                <>
                     <form onSubmit={order} style={{ marginBottom: "3em" }}>
-    
-                <div className="form-outline mb-4" style={{ width: "41em", marginTop: "3em" }}>
-                    <h1 style={{ marginBottom: "1em" }} id="order">CLIENT INFORMATION</h1>
-                </div>
-                <div className="form-outline mb-4" style={{ width: "41em" }}>
-    
-                    <h4>Full name:</h4>
-                    <input type="text" name="fname" id="form2Example1" className="form-control" placeholder="First name" required style={{ width: "15em", display: "inline-block", marginRight: "1em" }} onChange={e => setFirstname(e.target.value)}/>
-                    <input type="text" name="lname" id="form2Example1" className="form-control" placeholder="Last name" required style={{ width: "15em", display: "inline-block" }} onChange={e => setLastname(e.target.value)}/>
-                </div>
-    
-                <div className="form-outline mb-4" style={{ width: "41em" }}>
-                    <h4>Address:</h4>
-                    <input type="text" name="email" id="form2Example1" className="form-control" placeholder="Address" required style={{ width: "31em", display: "inline-block" }} onChange={e => setAddress(e.target.value)}/>
-                </div>
-    
-                <div className="form-outline mb-4" style={{ width: "41em" }}>
-                    <h4>Postal code:</h4>
-                    <input type="text" id="form2Example1" className="form-control" placeholder="Postal code" required style={{ width: "31em", display: "inline-block" }} onChange={e => setZip(e.target.value)}/>
-                </div>
-    
-                <div className="form-outline mb-4" style={{ width: "41em" }}>
-                    <h4>City:</h4>
-                    <input type="text" id="form2Example1" className="form-control" placeholder="City" required style={{ width: "31em", display: "inline-block" }} onChange={e => setCity(e.target.value)}/>
-                </div>
-    
-    
-                <div className="form-outline mb-4" style={{ width: "41em" }}>
-                    <button className="btn btn-warning btn-block mb-4">ORDER</button>
-                </div>
-    
+                        <div className="form-outline mb-4" style={{ width: "41em", marginTop: "5em" }}>
+                            <h1 style={{ marginBottom: "1em" }} id="order">CLIENT INFORMATION</h1>
+                        </div>
+                        <div className="form-outline mb-4" style={{ width: "41em" }}>
+                            <h4>Full name:</h4>
+                            <input type="text" name="fname" id="form2Example1" className="form-control" placeholder="First name" required style={{ width: "15em", display: "inline-block", marginRight: "1em" }} onChange={e => setFirstname(e.target.value)}/>
+                            <input type="text" name="lname" id="form2Example1" className="form-control" placeholder="Last name" required style={{ width: "15em", display: "inline-block" }} onChange={e => setLastname(e.target.value)}/>
+                        </div>
+                        <div className="form-outline mb-4" style={{ width: "41em" }}>
+                            <h4>Address:</h4>
+                            <input type="text" name="email" id="form2Example1" className="form-control" placeholder="Address" required style={{ width: "31em", display: "inline-block" }} onChange={e => setAddress(e.target.value)}/>
+                        </div>
+                        <div className="form-outline mb-4" style={{ width: "41em" }}>
+                            <h4>Postal code:</h4>
+                            <input type="text" id="form2Example1" className="form-control" placeholder="Postal code" required style={{ width: "31em", display: "inline-block" }} onChange={e => setZip(e.target.value)}/>
+                        </div>
+                        <div className="form-outline mb-4" style={{ width: "41em" }}>
+                            <h4>City:</h4>
+                            <input type="text" id="form2Example1" className="form-control" placeholder="City" required style={{ width: "31em", display: "inline-block" }} onChange={e => setCity(e.target.value)}/>
+                        </div>
+                        <div className="form-outline mb-4" style={{ width: "41em" }}>
+                            <button className="btn btn-warning btn-block mb-4">ORDER</button>
+                        </div>
                     </form>
-                </>
                 }
             </div>
         )
     } else {
         return (
-        <div className="container-fluid">
-            <div className="container">
-                <h1 style={{ textAlign:'center', paddingLeft: '200px', paddingTop: '100px',  fontSize: '60px', paddingBottom: '50px'}}>Thank you for your order!</h1>
-                <img width={"450px"} src={cat} id="cat"></img>
+            <div className="container-fluid">
+                <div className="container">
+                    <h1 style={{ textAlign:'center', paddingLeft: '200px', paddingTop: '100px',  fontSize: '60px', paddingBottom: '50px'}}>Thank you for your order!</h1>
+                    <img width={"450px"} src={cat} id="cat"></img>
+                </div>
             </div>
-        </div>
         )
     }
 }
