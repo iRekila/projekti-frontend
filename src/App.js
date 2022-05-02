@@ -5,6 +5,7 @@ import Front from './pages/Home';
 import Products from './pages/Products';
 import ManageCategories from './pages/ManageCategories';
 import ManageProducts from './pages/ManageProducts';
+import ManageOrders from './pages/ManageOrders';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Readmore from './pages/ReadMore';
@@ -13,8 +14,6 @@ import NotFound from './pages/NotFound';
 import Nav from './components/Nav';
 import Headers from './components/Header';
 import Footer from './components/Footer';
-import Login from './components/SignIn';
-import Register from './components/Register';
 import Order from './pages/Order';
 
 
@@ -75,11 +74,10 @@ function App() {
           <Route path="/readmore" element={<Readmore />} />
           <Route path="/product/:productId" element={<Product url={URL} addToCart={addToCart}/>} />
           <Route path="/*" element={<NotFound />} />
-          <Route path="/signin" element={<Login />} />
-          <Route path="/register" element={<Register />} />
           <Route path="/order" element={<Order url={URL} cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} emptyCart={emptyCart} />} />
           <Route path="/managecategories" element={<ManageCategories url={URL} />} />
           <Route path="/manageproducts" element={<ManageProducts url={URL} />} />
+          <Route path ="/manageorders" element={<ManageOrders url={URL} />} />
         </Routes>
       </div> 
       <Footer/> 

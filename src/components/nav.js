@@ -2,20 +2,12 @@ import React, { useState, useEffect } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import logo from "../images/fg.png"
 import axios from "axios";
-import Login from './LogIn.js';
 import Cart from "./Cart.js";
-
-
-
-
 
 export default function Nav({ url,cart }) {
     const [categories, setCategories] = useState([]);
     const [search, setSearch] = useState('');
-
     const navigate = useNavigate();
-
-
 
     useEffect(() => {
         axios.get(url + 'products/getcategories.php')
@@ -31,9 +23,9 @@ export default function Nav({ url,cart }) {
         if (e.charCode === 13) {
             e.preventDefault();
             navigate('/search/' + search);
+            setSearch("");
         }
     }
-    
 
     return (
         <>
@@ -52,23 +44,33 @@ export default function Nav({ url,cart }) {
                                 {categories.map(category => (
                                     <li><Link id="categories" to={'/products/' + category.id}>{category.name}</Link></li>
                                 ))}
-                                <hr className=""></hr>
-                                <li><Link id="categories" to="/managecategories">MANAGE CATEGORIES</Link></li>
-                                <li><Link id="categories" to="/manageproducts">MANAGE PRODUCTS</Link></li>
                             </div>
                         </div>
                         <li><Link to='/about' style={{ textDecoration: 'none' }}><p className="texts" >ABOUT BEER</p></Link></li>
                         <li><Link to='/contact' style={{ textDecoration: 'none' }}><p className="texts" >CONTACT</p></Link></li>
-                        <form className="d-flex">
-                            <input className="form-control me-2" type="search" value={search} onChange={(e) => setSearch(e.target.value)}
-                            onKeyPress={(e) => executeSearch(e)}
-                            style={{ backgroundColor: '#ffffff', borderColor: '#1E261E' }} placeholder="Search products" aria-label="Search"/>   
-
-                            <button className="btn btn-primary" style={{ backgroundColor: '#ffffff', borderColor: '#1E261E' }} type="submit"><svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="20px" height="20px">
-                                
-                                <path d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"/></svg></button>
+                        <form className="d-flex" onSubmit={(e) => executeSearch(e)}>
+                            <input
+                                className="form-control me-2"
+                                type="search"
+                                value={search}
+                                onChange={(e) => setSearch(e.target.value)}
+                                onKeyPress={(e) => executeSearch(e)}
+                                style={{ backgroundColor: '#ffffff', borderColor: '#1E261E' }}
+                                placeholder="Search products"
+                                aria-label="Search"
+                            />
                         </form>
-                        <Login />
+                        <div className="dropdown">
+                            <li className="market" style={{ textDecoration: 'none' }} id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABEUlEQVRIie3UMUoDYRDF8Z8psqUpLBRrBS+gx7ATD6E5iSjeQQ/gJUzEwmChnZZaKZiQ0ljsLkhQM5/5Agr74DX7DfOfgZ1Hoz+qAl30Marcx2H1thCtY4DJN76parKqmAH9DM+6eTcArX2QE3yVAO7lBA8TwMNIw6UgeJI46My+rWCjUQL0LVIUBd8lgEO1UfBZAvg8oXamCuWNRu64nRNMmUo/wReSXLXayoDoKc9miMvqW/ZNG2VRNLla2MYudrCFTvX2intlnl/gGu/zDraGYzyLZ/UTjrD6G2AHpxgnAKc9xgmWo9BNPM4BnPYDNiLg24zQ2oNpyFdZvRKZLlGhnvvKPzXXti/Yy7hEo3+iD9EHtgdqxQnwAAAAAElFTkSuQmCC"/>
+                                <h3 id="log">ADMIN</h3>
+                            </li>
+                            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton" style={{ padding: "12px"}}>
+                                <li><Link id="categories" to="/managecategories">CATEGORIES</Link></li>
+                                <li><Link id="categories" to="/manageproducts">PRODUCTS</Link></li>
+                                <li><Link id="categories" to="/manageorders">ORDERS</Link></li>
+                            </div>
+                        </div>
                         <Cart cart={cart} />
                     </ul>
                     <hr className="mt-4"></hr>
