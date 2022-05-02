@@ -1,7 +1,8 @@
 import '../App.css';
 import { Link } from 'react-router-dom';
-import React from 'react'
-import sadcat from '../images/sadcat.png'
+import React from 'react';
+import sadcat from '../images/sadcat.png';
+
 export default function NotFound() {
   return (
     <>

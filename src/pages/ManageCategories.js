@@ -37,10 +37,10 @@ export default function ManageCategories({ url }) {
     if (!addingCategory) {
         return (
             <>
-                <div style={{ width: "30em", display: "block", marginLeft: "auto", marginRight: "auto" }}>
+                <div style={{ marginTop: "3em", width: "45em", display: "block", marginLeft: "auto", marginRight: "auto" }}>
                     <h2 id="order" style={{ textAlign: "center", display: "block" }}>MANAGE CATEGORIES</h2>
                 </div>
-                <div style={{ width: "30em", display: "block", marginLeft: "auto", marginRight: "auto" }}>
+                <div style={{ marginBottom: "3em", width: "45em", display: "block", marginLeft: "auto", marginRight: "auto" }}>
                     <h5 style={{ marginBottom: "1em" }}>Categories</h5>
                     <CategoryList url={url} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
                     <table className='table'>
@@ -66,7 +66,7 @@ export default function ManageCategories({ url }) {
     } else {
         return (
             <>
-                <div style={{ width: "30em", display: "block", marginLeft: "auto", marginRight: "auto" }}>
+                <div style={{ marginTop: "3em", width: "30em", display: "block", marginLeft: "auto", marginRight: "auto" }}>
                     <h2 id="order" style={{ textAlign: "center", display: "block" }}>ADD CATEGORY</h2>
                 </div>
                 <form className="mt-5 mb-5" onSubmit={saveCategory}>

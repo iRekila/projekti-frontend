@@ -55,8 +55,9 @@ export default function ManageProducts({ url }) {
     if (!addingProduct) {
         return (
             <>
-                <div style={{ width: "30em", display: "block", marginLeft: "auto", marginRight: "auto" }}>
+                <div style={{ marginTop: "3em", width: "45em", display: "block", marginLeft: "auto", marginRight: "auto" }}>
                     <h2 id="order" style={{ textAlign: "center", display: "block" }}>MANAGE PRODUCTS</h2>
+                    <h5 style={{ marginBottom: "1em" }}>Categories</h5>
                     <CategoryList url={url} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
                     <table className='table'>
                         <thead>
@@ -79,7 +80,7 @@ export default function ManageProducts({ url }) {
                         </tbody>
                     </table>
                 </div>
-                <div style={{ width: "30em", display: "block", marginLeft: "auto", marginRight: "auto" }}>
+                <div style={{ marginBottom: "3em", width: "45em", display: "block", marginLeft: "auto", marginRight: "auto" }}>
                     <button className="btn btn-primary btn-block mb-4" onClick={() => setAddingProduct(true)} style={{ width: "10em", display: "block", marginTop: "2em" }}>Add</button>
                 </div>
             </>
@@ -87,7 +88,7 @@ export default function ManageProducts({ url }) {
     } else {
         return (
             <>
-                <div style={{ width: "30em", display: "block", marginLeft: "auto", marginRight: "auto" }}>
+                <div style={{ marginTop: "3em", width: "30em", display: "block", marginLeft: "auto", marginRight: "auto" }}>
                     <h2 id="order" style={{ textAlign: "center", display: "block" }}>ADD PRODUCT</h2>
                 </div>
                 <form className="mt-5 mb-5" onSubmit={saveProduct}>
