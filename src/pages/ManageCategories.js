@@ -5,7 +5,6 @@ import CategoryList from '../components/CategoryList';
 export default function ManageCategories({ url }) {
     const [name, setName] = useState('');
     const [file, setFile] = useState(null);
-    const [slogan, setSlogan] = useState('');
     const [description, setDescription] = useState('');
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [addingCategory, setAddingCategory] = useState(false);
@@ -15,7 +14,6 @@ export default function ManageCategories({ url }) {
         const formData = new FormData();
         formData.append('name', name);
         formData.append('file', file);
-        formData.append('slogan', slogan);
         formData.append('description', description);
         axios.post(url + 'products/addcategory.php', formData, {
             headers: {
@@ -25,7 +23,6 @@ export default function ManageCategories({ url }) {
             .then((response) => {
                 setName('');
                 setFile(null);
-                setSlogan('');
                 setDescription('');
                 setAddingCategory(false);
                 setSelectedCategory(response.data);
@@ -46,20 +43,18 @@ export default function ManageCategories({ url }) {
                     <table className='table'>
                         <thead>
                             <tr>
-                                <th>Slogan</th>
                                 <th>Image</th>
                                 <th>Description</th>
                             </tr>
                         </thead>
                         <tbody>
                                 <tr>
-                                    <td>{selectedCategory?.slogan}</td>
                                     <td><img src={url + 'images/' + selectedCategory?.image} className="App-logo" alt="productimage" style={{ marginTop: "1em", marginBottom: "1em" }} /></td>
                                     <td>{selectedCategory?.description}</td>
                                 </tr>
                         </tbody>
                     </table>
-                    <button className="btn btn-warning btn-block mb-4" onClick={() => setAddingCategory(true)} style={{ width: "10em", display: "block", marginTop: "2em" }}>Add</button>
+                    <button className="btn-block mb-4" onClick={() => setAddingCategory(true)} style={{ width: "10em", display: "block", marginTop: "2em" }}>Add</button>
                 </div>
             </>
         )
@@ -88,15 +83,11 @@ export default function ManageCategories({ url }) {
                         )}
                     </div>
                     <div className="form-outline mb-4">
-                        <h5 style={{ marginBottom: "1em" }}>Slogan</h5>
-                        <input type="text" name="slogan" id="form2Example1" className="form-control" placeholder="" value={slogan} onChange={e => setSlogan(e.target.value)} required style={{ width: "20em", display: "inline-block" }} />
-                    </div>
-                    <div className="form-outline mb-4">
                         <h5 style={{ marginBottom: "1em" }}>Description</h5>
                         <input type="text" name="description" id="form2Example1" className="form-control" placeholder="" value={description} onChange={e => setDescription(e.target.value)} required style={{ width: "20em", display: "inline-block" }} />
                     </div>
-                    <button className="btn btn-warning btn-block mb-4" type="button" onClick={() => setAddingCategory(false)} style={{ width: "10em", display: "block"}}>Cancel</button>
-                    <button className="btn btn-warning btn-block mb-4" type="submit" style={{ width: "10em", display: "block"}}>Save</button>
+                    <button className="btn-block mb-4" type="button" onClick={() => setAddingCategory(false)} style={{ width: "10em", display: "block"}}>Cancel</button>
+                    <button className="btn-block mb-4" type="submit" style={{ width: "10em", display: "block"}}>Save</button>
                 </form>
             </>
         )

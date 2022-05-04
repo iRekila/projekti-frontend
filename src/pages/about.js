@@ -16,11 +16,11 @@ export default function About({ url }) {
     }, [])
 
     return (
-      <div className="container">
+      <div className="container" style={{ marginTop: "2em", marginBottom: "5em" }}>
         <div className="row">
-        <div className="col-sm">
-            <h1 id="order" style={{ textAlign: "center", display: "block" }}>ABOUT BEER</h1>
-        </div>
+          <div className="col-sm">
+              <h1 id="order" style={{ textAlign: "center", display: "block" }}>ABOUT BEER</h1>
+          </div>
         </div>
         {categories.map(category => (
           <div className="row" style={{ marginTop: "3em", marginBottom: "3em" }}>
@@ -28,30 +28,25 @@ export default function About({ url }) {
               <img src={url + 'images/' + category.image} className="App-logo" alt="categoryimage" style={{ display: "block", marginLeft: "auto", marginRight: "auto", height: "250px" }} />
             </div>
             <div className="col-sm">
-              <div className="row" style={{ marginTop: "0.5em", marginBottom: "0.5em" }}>
+              <div className="row" style={{ marginTop: "0.5em", marginBottom: "1em" }}>
                 <div className="col-sm">
                   <h2 className="cname">{category.name}</h2>
                 </div>
               </div>
-              <div className="row" style={{ marginTop: "0.5em", marginBottom: "0.5em" }}>
-                <div className="col-sm">
-                  <h5 className="slogan">{category.slogan}</h5>
-                </div>
-              </div>
-              <div className="row" style={{ marginTop: "0.5em", marginBottom: "0.5em" }}>
+              <div className="row" style={{ marginTop: "0.5em", marginBottom: "1em" }}>
                 <div className="col-sm">
                   <p className="customer">{category.description}</p>
                 </div>
               </div>
               <div className="row" style={{ marginTop: "0.5em", marginBottom: "0.5em" }}>
                 <div className="col-sm">
-                  <Link to={'/products/' + category.id}><button className="btn btn-warning" type="button">SEE PRODUCTS</button></Link>
+                  <Link to={'/products/' + category.id}><button type="button">SEE PRODUCTS</button></Link>
                 </div>
               </div>
             </div>
-        </div>
+          </div>
         ))}
-    </div>
+      </div>
     )
 }
 
