@@ -79,7 +79,7 @@ function App() {
           <Route path="/manageproducts" element={<ManageProducts url={URL} />} />
           <Route path ="/vieworders" element={<ViewOrders url={URL} />} />
         </Routes>
-      </div> 
+      </div>
       <Footer/> 
     </>
   );

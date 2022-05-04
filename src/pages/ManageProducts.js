@@ -88,8 +88,8 @@ export default function ManageProducts({ url }) {
     } else {
         return (
             <>
-                <div style={{ marginTop: "3em", width: "30em", display: "block", marginLeft: "auto", marginRight: "auto" }}>
-                    <h2 id="order" style={{ textAlign: "center", display: "block" }}>ADD PRODUCT</h2>
+                <div style={{ marginTop: "3em", width: "30em" }}>
+                    <h2 id="order" style={{ display: "block" }}>ADD PRODUCT</h2>
                 </div>
                 <form className="mt-5 mb-5" onSubmit={saveProduct}>
                     <div className="form-outline mb-4">
@@ -117,7 +117,7 @@ export default function ManageProducts({ url }) {
                         <h5 style={{ marginBottom: "1em" }}>Description</h5>
                         <input type="text" name="description" id="form2Example1" className="form-control" placeholder="" value={description} onChange={e => setDescription(e.target.value)} required style={{ width: "20em", display: "inline-block" }} />
                     </div>
-                    <button className="btn-block mb-4" type="button" onClick={() => setAddingProduct(false)} style={{ width: "10em", display: "block"}}>Cancel</button>
+                    <button className="btn-block mb-4" type="button" onClick={() => setAddingProduct(false)} style={{ width: "10em", display: "block", marginTop: "3em" }}>Cancel</button>
                     <button className="btn-block mb-4" type="submit" style={{ width: "10em", display: "block"}}>Save</button>
                 </form>
             </>
