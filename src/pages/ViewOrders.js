@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import uuid from 'react-uuid';
 
-export default function ManageOrders({ url }) {
+export default function ViewOrders({ url }) {
     const [orders, setOrders] = useState([]);
     const [orderRows, setOrderRows] = useState([]);
 
@@ -25,7 +25,7 @@ export default function ManageOrders({ url }) {
 
     return (
         <div style={{ marginTop: "3em", marginBottom: "3em", width: "45em", display: "block", marginLeft: "auto", marginRight: "auto" }}>
-            <h2 id="order" style={{ textAlign: "center", display: "block", marginBottom: "1.5em" }}>MANAGE ORDERS</h2>
+            <h2 id="order" style={{ textAlign: "center", display: "block", marginBottom: "1.5em" }}>VIEW ORDERS</h2>
             {orders.map((order) => (
                 <>
                     <table className='table' style={{ marginTop: "2.5em", marginBottom: "1.5em" }}>

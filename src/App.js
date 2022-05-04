@@ -5,7 +5,7 @@ import Front from './pages/Home';
 import Products from './pages/Products';
 import ManageCategories from './pages/ManageCategories';
 import ManageProducts from './pages/ManageProducts';
-import ManageOrders from './pages/ManageOrders';
+import ViewOrders from './pages/ViewOrders';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Readmore from './pages/ReadMore';
@@ -77,7 +77,7 @@ function App() {
           <Route path="/order" element={<Order url={URL} cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} emptyCart={emptyCart} />} />
           <Route path="/managecategories" element={<ManageCategories url={URL} />} />
           <Route path="/manageproducts" element={<ManageProducts url={URL} />} />
-          <Route path ="/manageorders" element={<ManageOrders url={URL} />} />
+          <Route path ="/vieworders" element={<ViewOrders url={URL} />} />
         </Routes>
       </div> 
       <Footer/> 

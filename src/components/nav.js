@@ -68,7 +68,7 @@ export default function Nav({ url,cart }) {
                             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton" style={{ padding: "12px"}}>
                                 <li><Link id="categories" to="/managecategories">CATEGORIES</Link></li>
                                 <li><Link id="categories" to="/manageproducts">PRODUCTS</Link></li>
-                                <li><Link id="categories" to="/manageorders">ORDERS</Link></li>
+                                <li><Link id="categories" to="/vieworders">ORDERS</Link></li>
                             </div>
                         </div>
                         <Cart cart={cart} />
