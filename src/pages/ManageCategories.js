@@ -59,7 +59,7 @@ export default function ManageCategories({ url }) {
                                 </tr>
                         </tbody>
                     </table>
-                    <button className="btn btn-primary btn-block mb-4" onClick={() => setAddingCategory(true)} style={{ width: "10em", display: "block", marginTop: "2em" }}>Add</button>
+                    <button className="btn btn-warning btn-block mb-4" onClick={() => setAddingCategory(true)} style={{ width: "10em", display: "block", marginTop: "2em" }}>Add</button>
                 </div>
             </>
         )
@@ -95,8 +95,8 @@ export default function ManageCategories({ url }) {
                         <h5 style={{ marginBottom: "1em" }}>Description</h5>
                         <input type="text" name="description" id="form2Example1" className="form-control" placeholder="" value={description} onChange={e => setDescription(e.target.value)} required style={{ width: "20em", display: "inline-block" }} />
                     </div>
-                    <button className="btn btn-primary btn-block mb-4" type="button" onClick={() => setAddingCategory(false)} style={{ width: "10em", display: "block"}}>Cancel</button>
-                    <button className="btn btn-primary btn-block mb-4" type="submit" style={{ width: "10em", display: "block"}}>Save</button>
+                    <button className="btn btn-warning btn-block mb-4" type="button" onClick={() => setAddingCategory(false)} style={{ width: "10em", display: "block"}}>Cancel</button>
+                    <button className="btn btn-warning btn-block mb-4" type="submit" style={{ width: "10em", display: "block"}}>Save</button>
                 </form>
             </>
         )

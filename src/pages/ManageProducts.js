@@ -81,7 +81,7 @@ export default function ManageProducts({ url }) {
                     </table>
                 </div>
                 <div style={{ marginBottom: "3em", width: "45em", display: "block", marginLeft: "auto", marginRight: "auto" }}>
-                    <button className="btn btn-primary btn-block mb-4" onClick={() => setAddingProduct(true)} style={{ width: "10em", display: "block", marginTop: "2em" }}>Add</button>
+                    <button className="btn btn-warning btn-block mb-4" onClick={() => setAddingProduct(true)} style={{ width: "10em", display: "block", marginTop: "2em" }}>Add</button>
                 </div>
             </>
         )
@@ -117,8 +117,8 @@ export default function ManageProducts({ url }) {
                         <h5 style={{ marginBottom: "1em" }}>Description</h5>
                         <input type="text" name="description" id="form2Example1" className="form-control" placeholder="" value={description} onChange={e => setDescription(e.target.value)} required style={{ width: "20em", display: "inline-block" }} />
                     </div>
-                    <button className="btn btn-primary btn-block mb-4" type="button" onClick={() => setAddingProduct(false)} style={{ width: "10em", display: "block"}}>Cancel</button>
-                    <button className="btn btn-primary btn-block mb-4" type="submit" style={{ width: "10em", display: "block"}}>Save</button>
+                    <button className="btn btn-warning btn-block mb-4" type="button" onClick={() => setAddingProduct(false)} style={{ width: "10em", display: "block"}}>Cancel</button>
+                    <button className="btn btn-warning btn-block mb-4" type="submit" style={{ width: "10em", display: "block"}}>Save</button>
                 </form>
             </>
         )
