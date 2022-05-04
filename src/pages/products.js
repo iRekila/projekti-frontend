@@ -42,12 +42,11 @@ export default function Products({ url, addToCart }) {
                 <div className="row">
                     <div className="col-sm">
                         <h1 id="order" style={{ textAlign: "center", display: "block" }}>{categoryName}{searchName}</h1>
-                        
                     </div>
                 </div>
                 <div className="row">
-                        {products.map(product => (
-                            <div className="col-sm" key={product.id} style={{ display: "flex", justifyContent: "space-between" }}>
+                    {products.map(product => (
+                        <div className="col-sm" key={product.id} style={{ display: "flex", justifyContent: "space-between" }}>
                             <div id="order_text"  style={{ marginLeft: "auto", marginRight: "auto" }}>
                                 <Link id="product" className="product" style={{ textDecoration: 'none' }} to={'/product/' + product.id}>
                                     <div className="card" style={{ width: "11em", height: "auto", paddingLeft: "auto", paddingRight: "auto", marginTop: "1em" }}>
@@ -63,8 +62,8 @@ export default function Products({ url, addToCart }) {
                                     <button type="button" style={{ fontSize: "0.75em" }} onClick={() => addToCart(product)}>ADD TO CART</button>
                                 </div>
                             </div>
-                            </div>
-                        ))}
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
