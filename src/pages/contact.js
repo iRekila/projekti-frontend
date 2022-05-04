@@ -44,7 +44,7 @@ export default function Contact({ url }) {
               <textarea name="message" id="form2Example1" className="form-control" placeholder="Type your message here" value={message} onChange={e => setMessage(e.target.value)} required style={{ width: "31em", display: "inline-block", height: "15em" }}></textarea>
             </div>
             <div className="form-outline mb-4" style={{ width: "41em", marginLeft: "auto", marginRight: "auto" }}>
-              <button className="btn btn-warning btn-block mb-4">Submit</button>
+              <button className="btn-block mb-4">Submit</button>
             </div>
           </form>
         </div>

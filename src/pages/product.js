@@ -41,7 +41,7 @@ export default function Product({ url, addToCart }) {
                     </div>
                     <div className="row" style={{textAlign: "center", marginTop: "2em"}}>
                         <div className="col-sm">
-                        <button id="btn" className="btn btn-warning" type="button" onClick={e => addToCart(product)}>ADD TO CART</button>
+                        <button id="btn" type="button" onClick={e => addToCart(product)}>ADD TO CART</button>
                         </div>
                     </div>
                 </div>

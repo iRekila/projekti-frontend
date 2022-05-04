@@ -60,7 +60,7 @@ export default function Products({ url, addToCart }) {
                                 </Link>
                                 <br />
                                 <div style={{ display: "flex", justifyContent: "center", marginBottom: "1em" }}>
-                                    <button className="btn btn-warning" type="button" onClick={e => addToCart(product)}>ADD TO CART</button>
+                                    <button type="button" style={{ fontSize: "0.75em" }} onClick={() => addToCart(product)}>ADD TO CART</button>
                                 </div>
                             </div>
                             </div>

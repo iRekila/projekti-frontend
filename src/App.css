@@ -220,10 +220,6 @@ h1 {
   font-size: 20px;
 }
 
-.slogan {
-  font-size: 25px;
-}
-
 .cname {
   font-size: 35px;
 }
@@ -246,4 +242,9 @@ h1 {
 li.link-wrapper > a.active {
   background-color: black;
   color: white;
+}
+
+button {
+  background-color: #CEAE2C;
+  border-color: #CEAE2C;
 }

@@ -109,7 +109,7 @@ export default function Order({ url, cart, removeFromCart, updateAmount, emptyCa
                             <input type="text" id="form2Example1" className="form-control" placeholder="City" required style={{ width: "31em", display: "inline-block" }} onChange={e => setCity(e.target.value)}/>
                         </div>
                         <div className="form-outline mb-4" style={{ width: "41em" }}>
-                            <button className="btn btn-warning btn-block mb-4">ORDER</button>
+                            <button className="btn-block mb-4">ORDER</button>
                         </div>
                     </form>
                 }
